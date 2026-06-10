@@ -1,5 +1,26 @@
 ---
 layout: "00"
-title: not found
+id: index
+title: Not found.
+css: "
+	pre{font-weight:bold; max-width:40em; margin:1em auto; background:blue; color:#fff; padding:1em;}
+	::selection{background:#000; color:#fff;}
+	.wrap{padding:0 2rem;}
+	#index a{color:inherit;} #index a:hover,#index a:focus,#index a:active{opacity:.5;}
+	h1{height:0; opacity:0; background:blue; color:#fff;}
+	@media only screen and (max-width:34em){
+		pre{display:none;}
+		h1{height:auto; opacity:1;}
+	}"
 ---
-///
+<h1 class="wrap">{{page.title}}</h1>
+<span class="x">description: ASCII art of the page title. <a href="#skip">skip it</a></span>
+<pre>
+||\\    ||                    //===                            ||   
+|| \\   ||           ||       ||                               ||   
+||  \\  ||  //==\\  =++==    =++== //==\\  ||   || ||==\\  //==+|   
+||   \\ || ||    ||  ||       ||  ||    || ||   || ||  || ||   ||   
+||    \\||  \\==//   \\===    ||   \\==//   \\==/\ ||  ||  \\==/\ []
+</pre>
+
+<div class="wrap" id="skip"><p>&lt;= <a href="{%include url.html%}">return to art-2026 index</a></p></div>

@@ -6,5 +6,5 @@
 	<link rel="stylesheet" type="text/css" href="{{site.url}}/assets/00.css">{%if page.css%}
 	<style>{{page.css}}</style>{%endif%}
 </head>
-<body{%if page.id%} class="{{page.class}}"{%endif%}>{{content}}</body>
+<body{%if page.id%} id="{{page.id}}"{%endif%}{%if page.class%} class="{{page.class}}"{%endif%}>{{content}}</body>
 </html>
