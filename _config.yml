@@ -1,2 +1,11 @@
 name: "a-flyleaf/art-2026"
 markdown: kramdown
+
+collections:
+    art:
+        output: true
+defaults:
+  - scope:
+      path: "_art"
+    values:
+      permalink: /:name
