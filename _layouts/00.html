@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>{{site.name}}{%if page.title%} / {{page.title}}{%endif%}</title>
+	<title>{%if page.title and page.id!="index"%}{{page.title}} | {%endif%}{{site.name}}{%if page.id=="index" and page.title%} / {{page.title}}{%endif%}</title>
 	<link rel="stylesheet" type="text/css" href="{{site.url}}/assets/00.css">{%if page.css%}
 	<style>{{page.css}}</style>{%endif%}
 </head>

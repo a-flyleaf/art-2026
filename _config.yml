@@ -8,4 +8,4 @@ defaults:
   - scope:
       path: "_art"
     values:
-      permalink: /:name
+      permalink: /:slug
