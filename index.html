@@ -6,7 +6,7 @@ css: "
 		#gallery a:hover,#gallery a:focus,#gallery a:active{opacity:.5;}
 	hr{margin:3em 0 1em;} footer{text-align:right;} small{font-size:.75em; opacity:.5;}"
 ---
-<div class="wrap">
+<section class="wrap">
 <h1><a href="https://a-flyleaf.github.io">a-flyleaf</a>/art-2026</h1>
 
 <p>Because I don’t post my art anywhere else online these days. Everything that I want to publish goes here now. <em>Everything.</em></p>
@@ -14,10 +14,10 @@ css: "
 <p>Feel free to repost, edit, whatever—so long as credit is attached.</p>
 
 <!--some kind of simple javascript tag highlighter thign would be cool... like, list them all, then if it's clicked it'll fade out everything that *doesn't* apply. should be able to do this with site data & classes....-->
-</div>
+</section>
 
-<div id="gallery" class="wrap"><ul>{%for a in site.art%}<a href="{%include url.html%}/{{a.slug}}"><li>
+<section id="gallery" class="wrap"><ul>{%for a in site.art%}<a href="{%include url.html%}/{{a.slug}}"><li>
 	<img src="{%include url.html%}/assets/art/{{a.slug}}_100.png" alt="{{a.title}}" width="100px" height="100px">
-</li></a>{%endfor%}</ul></div>
+</li></a>{%endfor%}</ul></section>
 
 <footer class="wrap"><hr><small><i>updated <b>June&nbsp;10</b>: site creation</i></small></footer>
