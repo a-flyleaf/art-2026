@@ -13,10 +13,13 @@ css: "
 
 <p>Feel free to repost, edit, whatever—so long as credit is attached.</p>
 
-<!--some kind of simple javascript tag highlighter thign would be cool... like, list them all, then if it's clicked it'll fade out everything that *doesn't* apply. should be able to do this with site data & classes....-->
+<!--some kind of simple javascript tag highlighter thign would be cool... like, list them all, then if it's clicked it'll fade out everything that *doesn't* apply. should be able to do this with site data & classes....
+
+tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{{t}}</li>[%endfor%}[%endfor%}</ul>
+-->
 </section>
 
-<section id="gallery" class="wrap"><ul>{%for a in site.art%}<a href="{%include url.html%}/{{a.slug}}"><li>
+<section id="gallery" class="wrap"><ul>{%for a in site.art%}<a href="{%include url.html%}/{{a.slug}}"><li class="{%for t in a.tags%}t-{{t}}{%unless forloop.last%}&nbsp;{%endunless%}{%endfor%}">
 	<img src="{%include url.html%}/assets/art/{{a.slug}}_100.png" alt="{{a.title}}" width="100px" height="100px">
 </li></a>{%endfor%}</ul></section>
 
