@@ -5,97 +5,58 @@ slug: japhet
 tags: [3d,fanart]
 date: 2026-05-28
 
-font: >-
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+typ: b3d
+main: japhet_12-smooth.png
+orient: sqh
+
 css: "
-	body{background:#181818; color:#dcdcdc; font-family:inter,calibri,sans-serif; font-size:1.25em;}
-	::selection{background:#000; color:#ff9f2c;}
-	a{color:inherit; text-decoration-color:#ff9f2c;} a:focus,a:hover,a:active{color:#fff; text-decoration:none;}
-	
-	.col:first-child{text-align:center; padding:1em 1em 0;} #img img{max-height:95vh; border:1px solid #4a4a4a;} #img:active,#img:focus,#img:hover{opacity:.75;}
-	
 	#cp{text-align:right;}
-	h1{font-size:2em; font-style:italic; border-bottom:1px solid #4a4a4a; padding:.25em 0; color:#b8b8b8;}
-	#cp ul{margin:.5em 0 1em 1.25em; list-style-type:none;} #cp li{font-size:.75em; line-height:1.5; margin:.5em 0;} #cp li b{font-weight:normal; text-transform:uppercase;}
-	
-	.wrap{max-width:44rem; padding:0 1em;}
-	p{line-height:1.5; margin:1em 0;}
-	small{font-size:.75em;}
-	
-	#desc{background:#2e2e2e; padding:1em 0; border-top:1px solid #4a4a4a; border-bottom:1px solid #4a4a4a;}
-	#desc p:first-child{margin-top:0;}
-	figure{text-align:center; margin:1em 0;}
-	.fg{display:inline-block; border:1px solid #4a4a4a; line-height:0; border-radius:.25rem; overflow:hidden;} .fg:hover,.fg:active,.fg:focus{border-color:#ff9f2c;}
-	figcaption{color:#b8b8b8;}
-	
+	#cp ul{list-style-type:none;}
 	code{background:#fff; color:#000; padding:0 .25em;}
-	
-	details{border:1px solid #4a4a4a; padding:.5em 1em; border-radius:.25rem;} details[open]{border-color:#b8b8b8;} summary:hover,summary:active,summary:focus{color:#ff9f2c;} details[open] summary{color:#fff;}
-	.dt{margin:.5em 1em .25em;}
-	.dt li{font-size:.85em; line-height:1.5; margin:.5em 0;}
-	
-	hr{border:0;}
-	footer{background:#181818; padding:.5em 0 .75em; text-align:center;} footer a{color:#808080; text-decoration:none;}
 "
 
 cp: |-
   - May 20, 2026 (with renders on the 27--28th)
   - <b>time taken</b>: ~15.25 hours
-
-desc: |-
-  A character design that has inexplicably stuck with me is Japhet [<i>OFF</i>game](https://offtherpg.com/). Cat eats birb, birb puppets cat from within, birb bursts out of cat's mouth pixel-horror-style in the buildup to the boss fight. It's pretty cool!
-  
-  <figure><iframe width="560" height="315" src="https://videopress.com/embed/ihs3k9EB" frameborder="0" allowfullscreen allow="clipboard-write"></iframe><script src="https://videopress.com/videopress-iframe.js"></script><!--https://aflyleaf3.wordpress.com/2017/03/17/hhhh-2-hours-and-35-layers-later-have-an/-->
-  <figcaption><small>Animation I made in 2017<!--3/17, 2hours 35frames-->, inspired stylistically by the films of William&nbsp;Kentridge. Haven’t revisited the technique since, but I dig the visual effect.</small></figcaption></figure>
-  
-  Anyway, this was a great modeling challenge. Did a big complicated rig All By Myself™! He's not T-posed by default but whatever!! Features a smidge of Grease&nbsp;Pencil for the eye & beak outlines, some crumb of [scenery](https://lparchive.org/OFF/Update%2012/), and one of Blender's default [HDRI](https://www.youtube.com/watch?v=QNr7lwhW0h4)s for the lighting.
-  
-  <figure><a href="INC_URL/assets/art/japhet_ref+00+03.jpg" class="fg"><img src="INC_URL/assets/art/japhet_ref+00+03.jpg" alt="Model process shots: the original side view silhouette-sketch, a boxy mirrored wireframe, and a silhouetted shot of the upper body."></a>
-  <figcaption><small>The more I model, the more I realize I don’t actually like sticking to a tightly-defined turnaround drawing. Stuff changes as I tweak vertices constantly.</small></figcaption></figure>
-  
-  My initial plan was for a `#ffffff` (all white) model, shadeless or [cel-only](https://youtu.be/tWcaQ3gCbUU?t=149), with physics on Valerie (the cat) to make him all limp. But I like shiny materials and, despite the tedium, to have full control over bone positioning. Main thing I learned with this model ended up being how bone groups and (some) constraints work. Did not use Rigify, but generated and poked around at its default models to get a better sense of how it actually works.
-  
-  <figure><a href="INC_URL/assets/art/japhet_10.jpg" class="fg"><img src="INC_URL/assets/art/japhet_10.jpg" alt="A T-pose of the model with all bones visible."></a>
-  <figcaption><small>In this house we appreciate YouTube tutorial-maker Royal&nbsp;Skies, StackExchange randos, and a bunch of other pseudonymous heroes linked at the end of this page.</small></figcaption></figure>
-  
-  As a side note, the shading is only super shiny and reflective-looking like this with Blender's Smooth shading turned all the way on. Compare the main render [above](INC_URL/assets/art/japhet_12-smooth.png) to the auto-smoothed version:
-  
-  <figure><a href="INC_URL/assets/art/japhet_12-autosmooth.png" class="fg"><img src="INC_URL/assets/art/japhet_12-autosmooth.png" alt="Model process shots: the original side view silhouette-sketch, "></a>
-  <figcaption><small>Flatter, yet closer to my original concept.</small></figcaption></figure>
-  
-  The wing bones could be tweaked further for ease of use, but overall I'm happy with how this turned out! Have some resource linkspam...
-  
-  <details><summary><big><b>resources used</b> and other techy footnotes</big></summary>
-  <div class="dt" markdown="1">
-  - YouTube: [<b>Inverse Kinematics in 2 Minutes</b>](https://www.youtube.com/watch?v=Pt3-mHBCoQk). Uses Blender&nbsp;2.8 but still entirely workable, give or take the UI <small>(user&nbsp;interface, menus buttons etc.)</small>.
-  - StackExchange: [<b>keeping IK feet flat</b>](https://blender.stackexchange.com/questions/91802/keep-rig-feet-flat-on-the-ground-ik-rig). Now *that's* an old UI!
-  - YT: [<b>Rigging Eyes in 60 Seconds</b>](https://www.youtube.com/watch?v=xSsav9wlDwI). Japhet's eyes don't move, but I used this for the head; it follows a single bone floating in front of the beak, carrot-on-a-stick style.
-  - YT: [animating a tail (short)](https://www.youtube.com/shorts/GrH4HP5elvs) + [<b>I poorly explain the damped track constraint</b>](https://www.youtube.com/watch?v=SMZam1zFAz4). I considered using this for the wings, but ended up preferring [Copy Rotation](https://docs.blender.org/manual/en/latest/animation/constraints/transform/copy_rotation.html) for more control.
-  - YT: [<b>How to Join or Combine Armatures</b>](https://www.youtube.com/watch?v=oj_2_1XkgNw). TL;DR join it, then re-parent the child's root bone(s) accordingly.
-  - r/blenderHelp: [unifying bone colors](https://old.reddit.com/r/blenderhelp/comments/18zuybs/trouble_giving_bones_collection_unanimous_colour/l0twyu2/). `ALT` is key!
-  - StackExchange: [parenting Grease Pencil to an armature](https://blender.stackexchange.com/questions/90915/how-to-parent-a-grease-pencil-with-armature). Not mentioned: You also need to assign the Grease Pencil Layer to a specific bone through the Relations dropdown!
-  - StackExchange: [disabling Grease Pencil overlap](https://blender.stackexchange.com/questions/248755/my-render-shows-the-grease-pencil-on-the-front-and-backside-of-my-3d-object-x-r/344462#344462). auuughhh
-  - YT: [<b>Light Linking (Quick)</b>](https://www.youtube.com/watch?v=G2p760rvGNk), used in the final render to highlight Japhet's head and not Valerie.
-  </div></details>
-  
-  ...and a bird dab.
-  
-  <figure><a href="INC_URL/assets/art/japhet_13b2-dab.png" class="fg"><img src="INC_URL/assets/art/japhet_13b2-dab.png" alt="Japhet doing a dab."></a></figure>
-  
-  <figure><a href="INC_URL/assets/art/japhet_13b3-dabspin.gif" class="fg"><img src="INC_URL/assets/art/japhet_13b3-dabspin.gif" alt="Japhet turnaround, still hitting that dab."></a>
-  <figcaption><small>This pose was only made to look good as a static image, but I thought it’d make a funny turnaround. Millennial go spin.</small></figcaption></figure>
-
 ---
-<main>
-	<section id="col">
-		<div class="col"><a href="{%include url.html%}/assets/art/japhet_12-smooth.png" target="_blank" id="img"><img src="{%include url.html%}/assets/art/japhet_12-smooth.png" alt=""></a></div>
-		<div id="cp" class="wrap col">
-			<h1>{{page.title}}</h1>
-			{{page.cp|markdownify}}
-		</div>
-	</section>
+A character design that has inexplicably stuck with me is Japhet [<i>OFF</i>game](https://offtherpg.com/). Cat eats birb, birb puppets cat from within, birb bursts out of cat's mouth pixel-horror-style in the buildup to the boss fight. It's pretty cool!
 
-	<section id="desc"><div class="wrap">{%capture url%}{%include url.html%}{%endcapture%}{{page.desc|markdownify|replace:"INC_URL",capture}}</div></section>
-</main><hr><footer><div class="wrap">
-	<small><a href="{%include url.html%}">a-flyleaf ◇ <b>art-2026</b></a></small>
-</div></footer>
+<figure><iframe width="560" height="315" src="https://videopress.com/embed/ihs3k9EB" frameborder="0" allowfullscreen allow="clipboard-write"></iframe><script src="https://videopress.com/videopress-iframe.js"></script><!--https://aflyleaf3.wordpress.com/2017/03/17/hhhh-2-hours-and-35-layers-later-have-an/-->
+<figcaption><small>Animation I made in 2017<!--3/17, 2hours 35frames-->, inspired stylistically by the films of William&nbsp;Kentridge. Haven’t revisited the technique since, but I dig the visual effect.</small></figcaption></figure>
+
+Anyway, this was a great modeling challenge. Did a big complicated rig All By Myself™! He's not T-posed by default but whatever!! Features a smidge of Grease&nbsp;Pencil for the eye & beak outlines, some crumb of [scenery](https://lparchive.org/OFF/Update%2012/), and one of Blender's default [HDRI](https://www.youtube.com/watch?v=QNr7lwhW0h4)s for the lighting.
+
+<figure><a href="{%include url.html%}/assets/art/japhet_ref+00+03.jpg" class="fg"><img src="{%include url.html%}/assets/art/japhet_ref+00+03.jpg" alt="Model process shots: the original side view silhouette-sketch, a boxy mirrored wireframe, and a silhouetted shot of the upper body."></a>
+<figcaption><small>The more I model, the more I realize I don’t actually like sticking to a tightly-defined turnaround drawing. Stuff changes as I tweak vertices constantly.</small></figcaption></figure>
+
+My initial plan was for a `#ffffff` (all white) model, shadeless or [cel-only](https://youtu.be/tWcaQ3gCbUU?t=149), with physics on Valerie (the cat) to make him all limp. But I like shiny materials and, despite the tedium, to have full control over bone positioning. Main thing I learned with this model ended up being how bone groups and (some) constraints work. Did not use Rigify, but generated and poked around at its default models to get a better sense of how it actually works.
+
+<figure><a href="{%include url.html%}/assets/art/japhet_10.jpg" class="fg"><img src="{%include url.html%}/assets/art/japhet_10.jpg" alt="A T-pose of the model with all bones visible."></a>
+<figcaption><small>In this house we appreciate YouTube tutorial-maker Royal&nbsp;Skies, StackExchange randos, and a bunch of other pseudonymous heroes linked at the end of this page.</small></figcaption></figure>
+
+As a side note, the shading is only super shiny and reflective-looking like this with Blender's Smooth shading turned all the way on. Compare the main render [above]({%include url.html%}/assets/art/japhet_12-smooth.png) to the auto-smoothed version:
+
+<figure><a href="{%include url.html%}/assets/art/japhet_12-autosmooth.png" class="fg"><img src="{%include url.html%}/assets/art/japhet_12-autosmooth.png" alt="Model process shots: the original side view silhouette-sketch, "></a>
+<figcaption><small>Flatter, yet closer to my original concept.</small></figcaption></figure>
+
+The wing bones could be tweaked further for ease of use, but overall I'm happy with how this turned out! Have some resource linkspam...
+
+<details><summary><big><b>resources used</b> and other techy footnotes</big></summary>
+<div class="dt" markdown="1">
+- YouTube: [<b>Inverse Kinematics in 2 Minutes</b>](https://www.youtube.com/watch?v=Pt3-mHBCoQk). Uses Blender&nbsp;2.8 but still entirely workable, give or take the UI <small>(user&nbsp;interface, menus buttons etc.)</small>.
+- StackExchange: [<b>keeping IK feet flat</b>](https://blender.stackexchange.com/questions/91802/keep-rig-feet-flat-on-the-ground-ik-rig). Now *that's* an old UI!
+- YT: [<b>Rigging Eyes in 60 Seconds</b>](https://www.youtube.com/watch?v=xSsav9wlDwI). Japhet's eyes don't move, but I used this for the head; it follows a single bone floating in front of the beak, carrot-on-a-stick style.
+- YT: [animating a tail (short)](https://www.youtube.com/shorts/GrH4HP5elvs) + [<b>I poorly explain the damped track constraint</b>](https://www.youtube.com/watch?v=SMZam1zFAz4). I considered using this for the wings, but ended up preferring [Copy Rotation](https://docs.blender.org/manual/en/latest/animation/constraints/transform/copy_rotation.html) for more control.
+- YT: [<b>How to Join or Combine Armatures</b>](https://www.youtube.com/watch?v=oj_2_1XkgNw). TL;DR join it, then re-parent the child's root bone(s) accordingly.
+- r/blenderHelp: [unifying bone colors](https://old.reddit.com/r/blenderhelp/comments/18zuybs/trouble_giving_bones_collection_unanimous_colour/l0twyu2/). `ALT` is key!
+- StackExchange: [parenting Grease Pencil to an armature](https://blender.stackexchange.com/questions/90915/how-to-parent-a-grease-pencil-with-armature). Not mentioned: You also need to assign the Grease Pencil Layer to a specific bone through the Relations dropdown!
+- StackExchange: [disabling Grease Pencil overlap](https://blender.stackexchange.com/questions/248755/my-render-shows-the-grease-pencil-on-the-front-and-backside-of-my-3d-object-x-r/344462#344462). auuughhh
+- YT: [<b>Light Linking (Quick)</b>](https://www.youtube.com/watch?v=G2p760rvGNk), used in the final render to highlight Japhet's head and not Valerie.
+</div></details>
+
+...and a bird dab.
+
+<figure><a href="{%include url.html%}/assets/art/japhet_13b2-dab.png" class="fg"><img src="{%include url.html%}/assets/art/japhet_13b2-dab.png" alt="Japhet doing a dab."></a></figure>
+
+<figure><a href="{%include url.html%}/assets/art/japhet_13b3-dabspin.gif" class="fg"><img src="{%include url.html%}/assets/art/japhet_13b3-dabspin.gif" alt="Japhet turnaround, still hitting that dab."></a>
+<figcaption><small>This pose was only made to look good as a static image, but I thought it’d make a funny turnaround. Millennial go spin.</small></figcaption></figure>

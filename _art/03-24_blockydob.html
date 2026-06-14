@@ -7,26 +7,10 @@ date: 2026-03-24
 
 typ: b3d
 main: blockydob_53-kden.gif
+orient: vert
 
 css: "
 	#img{transition:.5s ease-in;} #img:active,#img:focus,#img:hover{transition:.65s ease-out;}
-	
-	/*this can be an added class later if needed*/
-	@media only screen and (min-width:40em){
-		.col{width:49%; display:inline-block; vertical-align:middle;}
-		h1{font-size:1.5em;}
-		#main a{display:block; text-align:right;} #main img{vertical-align:bottom;} /*https://stackoverflow.com/questions/15940338/is-there-a-way-via-css-to-set-the-image-height-to-the-line-height/15940849#15940849*/
-		#cp ul,#cp li:last-child{margin-bottom:0; max-width:27.5em;}
-		
-		#desc{padding:1em;}
-	}
-	@media only screen and (min-width:80em){
-		h1{font-size:2em;}
-		@supports (max-height:1vh){
-			.col img{max-height:100vh;}
-			#cp{margin-top:75vh;}
-		}
-	}
 "
 
 cp: |-

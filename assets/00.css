@@ -23,6 +23,24 @@ summary{cursor:pointer;}
 #b3d ::selection{background:#000; color:#fff;}
 #b3d a{color:inherit; text-decoration-color:#ff9f2c;} #b3d a:focus,#b3d a:hover,#b3d a:active{color:#fff; text-decoration:none;} #b3d a::selection{color:#ff9f2c;}
 
+#b3d .sqh .col:first-child{text-align:center; padding:1em 1em 0;}
+#b3d .sqh #img img{max-height:95vh; border:1px solid #4a4a4a;}
+@media only screen and (min-width:40em){
+	.vert .col{width:49%; display:inline-block; vertical-align:middle;}
+	.vert h1{font-size:1.5em;}
+	.vert a{display:block; text-align:right;} .vert img{vertical-align:bottom;} /*https://stackoverflow.com/questions/15940338/is-there-a-way-via-css-to-set-the-image-height-to-the-line-height/15940849#15940849*/
+	.vert #cp ul,.vert #cp li:last-child{margin-bottom:0; max-width:27.5em;}
+	
+	.vert #desc{padding:1em;}
+}
+@media only screen and (min-width:80em){
+	.vert h1{font-size:2em;}
+	@supports (max-height:1vh){
+		.vert .col img{max-height:100vh;}
+		.vert #cp{margin-top:75vh;}
+	}
+}
+
 #b3d #img:active,#b3d #img:focus,#b3d #img:hover{opacity:.75;}
 #b3d h1{font-size:2em; font-style:italic; border-bottom:1px solid #4a4a4a; padding:.25em 0; color:#b8b8b8;}
 #b3d #cp ul{margin:.5em 0 1em 1em;} #b3d #cp li{font-size:.75em; line-height:1.5; margin:.5em 0;} #b3d #cp li b{font-weight:normal; text-transform:uppercase;}
@@ -36,6 +54,10 @@ summary{cursor:pointer;}
 #b3d figure{text-align:center; margin:1em 0;}
 #b3d .fg{display:inline-block; border:1px solid #4a4a4a; line-height:0; border-radius:.25rem; overflow:hidden;} #b3d .fg:hover,#b3d .fg:active,#b3d .fg:focus{border-color:#ff9f2c;}
 #b3d figcaption{color:#b8b8b8;}
+
+#b3d details{border:1px solid #4a4a4a; padding:.5em 1em; border-radius:.25rem;} #b3d details[open]{border-color:#b8b8b8;} #b3d summary:hover,#b3d summary:active,#b3d summary:focus{color:#ff9f2c;} #b3d details[open] #b3d summary{color:#fff;}
+#b3d .dt{margin:.5em 1em .25em;}
+#b3d .dt li{font-size:.85em; line-height:1.5; margin:.5em 0;}
 
 #b3d hr{border:0;}
 #b3d footer{background:#181818; padding:.5em 0 .75em; text-align:center;} #b3d footer a{color:#808080; text-decoration:none;}

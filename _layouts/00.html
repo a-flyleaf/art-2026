@@ -9,7 +9,7 @@
 <body{%if page.typ%} id="{{page.typ}}"{%endif%}{%if page.class%} class="{{page.class}}"{%endif%}>
 	{%if page.typ=="b3d"%}
 	<main>
-		<section id="main">
+		<section id="main" class="{{page.orient}}">
 			<div class="col"><a href="{%include url.html%}/assets/art/{{page.main}}" target="_blank" id="img"><img src="{%include url.html%}/assets/art/{{page.main}}" alt=""></a></div>
 			<div id="cp" class="wrap col">
 				<h1>{{page.title}}</h1>
