@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>{%if page.title and page.id!="index"%}{{page.title}} | {%endif%}{{site.name}}{%if page.id=="index" and page.title%} / {{page.title}}{%endif%}</title>
-	<link rel="stylesheet" type="text/css" href="{{site.url}}/assets/00.css">{%if page.font%}{{page.font}}{%endif%}{%if page.css%}
+	<title>{%if page.title and page.typ!="index"%}{{page.title}} | {%endif%}{{site.name}}{%if page.typ=="index" and page.title%} / {{page.title}}{%endif%}</title>
+	<link rel="stylesheet" type="text/css" href="{{site.url}}/assets/00.css">{%if page.typ=="b3d"%}<link rel="stylesheet" href="https://rsms.me/inter/inter.css">{%elsif page.font%}{{page.font}}{%endif%}{%if page.css%}
 	<style>{{page.css}}</style>{%endif%}
 </head>
-<body{%if page.id%} id="{{page.id}}"{%endif%}{%if page.class%} class="{{page.class}}"{%endif%}>{{content}}</body>
+<body{%if page.typ%} id="{{page.typ}}"{%endif%}{%if page.class%} class="{{page.class}}"{%endif%}>
+	{%if page.typ=="b3d"%}
+	<main>
+		<section id="main">
+			<div class="col"><a href="{%include url.html%}/assets/art/{{page.main}}" target="_blank" id="img"><img src="{%include url.html%}/assets/art/{{page.main}}" alt=""></a></div>
+			<div id="cp" class="wrap col">
+				<h1>{{page.title}}</h1>
+				{{page.cp|markdownify}}
+			</div>
+		</section>
+
+		<section id="desc"><div class="wrap">{{content|markdownify}}</div></section>
+	</main><hr><footer><div class="wrap">
+		<small><a href="{%include url.html%}">a-flyleaf ◇ <b>art-2026</b></a></small>
+	</div></footer>
+	{%else%}{{content}}{%endif%}
+</body>
 </html>

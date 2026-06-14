@@ -17,3 +17,25 @@ summary{cursor:pointer;}
 	#index{background:#202020; color:#efefef;}
 	#index a{color:#00c0ff;}
 }
+
+/*blender 3d*/
+#b3d{background:#181818; color:#dcdcdc; font-family:inter,calibri,sans-serif; font-size:1.25em;}
+#b3d ::selection{background:#000; color:#fff;}
+#b3d a{color:inherit; text-decoration-color:#ff9f2c;} #b3d a:focus,#b3d a:hover,#b3d a:active{color:#fff; text-decoration:none;} #b3d a::selection{color:#ff9f2c;}
+
+#b3d #img:active,#b3d #img:focus,#b3d #img:hover{opacity:.75;}
+#b3d h1{font-size:2em; font-style:italic; border-bottom:1px solid #4a4a4a; padding:.25em 0; color:#b8b8b8;}
+#b3d #cp ul{margin:.5em 0 1em 1em;} #b3d #cp li{font-size:.75em; line-height:1.5; margin:.5em 0;} #b3d #cp li b{font-weight:normal; text-transform:uppercase;}
+
+#b3d .wrap{max-width:44rem; padding:0 1em;}
+#b3d p{line-height:1.5; margin:1em 0;}
+#b3d small{font-size:.75em;}
+
+#b3d #desc{background:#2e2e2e; padding:1em 0; border-top:1px solid #4a4a4a; border-bottom:1px solid #4a4a4a;}
+#b3d #desc p:first-child{margin-top:0;}
+#b3d figure{text-align:center; margin:1em 0;}
+#b3d .fg{display:inline-block; border:1px solid #4a4a4a; line-height:0; border-radius:.25rem; overflow:hidden;} #b3d .fg:hover,#b3d .fg:active,#b3d .fg:focus{border-color:#ff9f2c;}
+#b3d figcaption{color:#b8b8b8;}
+
+#b3d hr{border:0;}
+#b3d footer{background:#181818; padding:.5em 0 .75em; text-align:center;} #b3d footer a{color:#808080; text-decoration:none;}
