@@ -17,10 +17,10 @@ css: "
 changelog:
   - date: 2026-06-10
     desc: >-
-      site creation; +[not found](URL/asdfghjkl) +[blockydob](URL/blockydob) +[moff](URL/moff)
+      site creation; +[not found](INC_URL/asdfghjkl) +[blockydob](INC_URL/blockydob) +[moff](INC_URL/moff)
   - date: 2026-06-14
     desc: >-
-      index changelog (you are here!)
+      index changelog (you are here!); +[japhet](INC_URL/japhet)
   - date: 2026-??-??
     desc: >-
       //
@@ -47,7 +47,7 @@ tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{
 <footer class="wrap"><hr>
 	<p><small><i>updated <b>June&nbsp;14</b></i></small></p>
 
-	<details><summary>changelog</summary>{%capture incurl%}{%include url.html%}{%endcapture%}
-		<ul>{%for c in page.changelog%}<li><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"URL",incurl}}</li>{%endfor%}</ul>
+	<details><summary>changelog</summary>{%capture inc-url%}{%include url.html%}{%endcapture%}
+		<ul>{%for c in page.changelog%}<li><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"INC_URL",inc-url}}</li>{%endfor%}</ul>
 	</details>
 </footer>
