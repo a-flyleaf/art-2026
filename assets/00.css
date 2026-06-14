@@ -4,6 +4,7 @@ header,nav,main,footer{display:block;}
 .x{position:absolute; left:-999px; width:1px; height:1px; top:auto; overflow:hidden;}
 .wrap{margin:0 auto;}
 img{max-width:100%;height:auto;}
+summary{cursor:pointer;}
 
 /*index, 404*/
 #index{font-family:verdana,sans-serif;}

@@ -2,11 +2,31 @@
 layout: "00"
 id: index
 css: "
+	#txt,footer{padding:0 1rem;}
 	#gallery.wrap{max-width:600px;} #gallery{text-align:center;} #gallery ul{list-style-type:none;} #gallery li{display:inline-block; margin:5px;}
 		#gallery a:hover,#gallery a:focus,#gallery a:active{opacity:.5;}
-	hr{margin:3em 0 1em;} footer{text-align:right;} small{font-size:.75em; opacity:.5;}"
+	
+	hr{margin:3em 0 .5em;}
+	footer{text-align:right;} #index footer p{margin:0; line-height:1;}
+	small,details{font-size:.75em; opacity:.5;}
+	details{margin-top:1em; display:inline-block;} summary{padding:.5em 0;}
+	details[open]{opacity:1;} details[open] summary{border-bottom:1px dashed #808080;}
+	details ul{list-style-type:none;} details li{margin:.5em 0;} details li:after{content:'•'; color:#808080;}
+"
+
+changelog:
+  - date: 2026-06-10
+    desc: >-
+      site creation; +[not found](URL/asdfghjkl) +[blockydob](URL/blockydob) +[moff](URL/moff)
+  - date: 2026-06-14
+    desc: >-
+      index changelog (you are here!)
+  - date: 2026-??-??
+    desc: >-
+      //
+
 ---
-<section class="wrap">
+<section id="txt" class="wrap">
 <h1><a href="https://a-flyleaf.github.io">a-flyleaf</a>/art-2026</h1>
 
 <p>Because I don’t post my art anywhere else online these days. Everything that I want to publish goes here now. <em>Everything.</em></p>
@@ -22,5 +42,12 @@ tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{
 <section id="gallery" class="wrap"><ul>{%for a in site.art%}<a href="{%include url.html%}/{{a.slug}}"><li class="{%for t in a.tags%}t-{{t}}{%unless forloop.last%}&nbsp;{%endunless%}{%endfor%}">
 	<img src="{%include url.html%}/assets/art/{{a.slug}}_100.png" alt="{{a.title}}" width="100px" height="100px">
 </li></a>{%endfor%}</ul></section>
+<!--for dates I'm using whichever day the thing was "finished" on, w/e that means. details on the page itself.-->
 
-<footer class="wrap"><hr><small><i>updated <b>June&nbsp;10</b>: site creation</i></small></footer>
+<footer class="wrap"><hr>
+	<p><small><i>updated <b>June&nbsp;14</b></i></small></p>
+
+	<details><summary>changelog</summary>{%capture incurl%}{%include url.html%}{%endcapture%}
+		<ul>{%for c in page.changelog%}<li><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"URL",incurl}}</li>{%endfor%}</ul>
+	</details>
+</footer>
