@@ -5,65 +5,34 @@ slug: moff
 tags: [3d,fanart]
 date: 2026-04-27
 
-font: >-
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+typ: b3d
+main: moff_3-tweak.gif
+orient: sqh
+
 css: "
-	body{background:#181818; color:#dcdcdc; font-family:inter,calibri,sans-serif; font-size:1.25em;}
-	::selection{background:#000; color:#ff9f2c;}
-	a{color:inherit; text-decoration-color:#ff9f2c;} a:focus,a:hover,a:active{color:#fff; text-decoration:none;}
-	
-	.col:first-child{text-align:center; padding:1em 1em 0;} #img img{max-height:95vh; border:1px solid #4a4a4a;} #img:active,#img:focus,#img:hover{opacity:.75;}
-	
 	#cp{text-align:center;}
 	h1{font-size:2em; font-style:italic; border-bottom:1px solid #4a4a4a; padding:.25em 0; color:#b8b8b8;}
-	#cp ul{margin:.5em 0 1em 1.25em; list-style-type:none;} #cp li{font-size:.75em; line-height:1.5; margin:.5em 0;} #cp li b{font-weight:normal; text-transform:uppercase;} #cp li:before{content:'￮'; margin-right:.5em; margin-left:-1.5em;}
-	
-	.wrap{max-width:44rem; padding:0 1em;}
-	p{line-height:1.5; margin:1em 0;}
-	small{font-size:.75em;}
-	
-	#desc{background:#2e2e2e; padding:1em 0; border-top:1px solid #4a4a4a; border-bottom:1px solid #4a4a4a;}
-	#desc p:first-child{margin-top:0;}
-	figure{text-align:center; margin:1em 0;}
-	.fg{display:inline-block; border:1px solid #4a4a4a; line-height:0; border-radius:.25rem; overflow:hidden;} .fg:hover,.fg:active,.fg:focus{border-color:#ff9f2c;}
-	figcaption{color:#808080;}
-	
-	hr{border:0;}
-	footer{background:#181818; padding:.5em 0 .75em; text-align:center;} footer a{color:#808080; text-decoration:none;}
+	#cp ul{list-style-type:none;} #cp li:before{content:'￮'; margin-right:.5em; margin-left:-1.5em;}
 "
 
 cp: |-
   - April 22, 2026 (with some tweaks on the 27th)
   - <b>time taken</b>: ~7.5 hours base, +35m tweaks
-
-desc: |-
-  Caught a Venomoth in a recent <i>Pokémon FireRed</i> playthrough and it was surprisingly good! That and its big ol' eyes nudged it up my Bug-type favoritism rankings some.
-  
-  This is a very simple model with an even simpler rig. It's based on [a specific plush](https://www.pokemoncenter.com/product/701-03830/venomoth-sitting-cuties-plush-6-in), and although I wasn't counting polys, it happens to clock in at 1,500 tris exactly. Also, both wings flap with one (1) driver-controlled bone movement. Neat!
-  
-  <figure><a href="INC_URL/assets/art/moff_3-rig.jpg" class="fg"><img src="INC_URL/assets/art/moff_3-rig.jpg" alt="A side view wireframe of the moth, with its bones highlighted and statistics displayed."></a></figure>
-  
-  I'm also pretty happy with how the colors turned out! The entire base palette uses [named HTML colors](https://htmlcolorcodes.com/color-names/), just to keep it simple, but the real magic is in the shader nodes. [Voilà:](https://old.reddit.com/r/blender/comments/1eqlwuw/no_idea_how_to_apply_hue_shifting_by_light_level/)
-  
-  <figure><a href="INC_URL/assets/art/moff_3-compare.png" class="fg"><img src="INC_URL/assets/art/moff_3-compare.png" alt="A screenshot of two moth models, one vibrant and one washed-out. Below is the base image texture, and the node tree for the shadows."></a>
-  <figcaption><small>For an extra clear example, I turned the Factor all the way up on the foreground moth here. The paler duplicate ignores the Color&nbsp;Ramp entirely.</small></figcaption></figure>
-  
-  Realism be darned, I like colors. And doofy eyes.
-
 ---
-<main>
-	<section id="col">
-		<div class="col"><a href="{%include url.html%}/assets/art/moff_3-tweak.gif" target="_blank" id="img"><img src="{%include url.html%}/assets/art/moff_3-tweak.gif" alt=""></a></div>
-		<div id="cp" class="wrap col">
-			<h1>{{page.title}}</h1>
-			{{page.cp|markdownify}}
-		</div>
-	</section>
+<div class="wrap" markdown="1">
+Caught a Venomoth in a recent <i>Pokémon FireRed</i> playthrough and it was surprisingly good! That and its big ol' eyes nudged it up my Bug-type favoritism rankings some.
 
-	<section id="desc"><div class="wrap">{%capture url%}{%include url.html%}{%endcapture%}{{page.desc|markdownify|replace:"INC_URL",capture}}</div>
-  
-  <figure><a href="{%include url.html%}/assets/art/moff_3-hi.jpg" class="fg"><img src="{%include url.html%}/assets/art/moff_3-hi.jpg" alt="A side view wireframe of the moth, with its bones highlighted and statistics displayed."></a>
-  <figcaption><small>u got games on ur phone?</small></figcaption></figure></section>
-</main><hr><footer><div class="wrap">
-	<small><a href="{%include url.html%}">a-flyleaf ◇ <b>art-2026</b></a></small>
-</div></footer>
+This is a very simple model with an even simpler rig. It's based on [a specific plush](https://www.pokemoncenter.com/product/701-03830/venomoth-sitting-cuties-plush-6-in), and although I wasn't counting polys, it happens to clock in at 1,500 tris exactly. Also, both wings flap with one (1) driver-controlled bone movement. Neat!
+
+<figure><a href="{%include url.html%}/assets/art/moff_3-rig.jpg" class="fg"><img src="{%include url.html%}/assets/art/moff_3-rig.jpg" alt="A side view wireframe of the moth, with its bones highlighted and statistics displayed."></a></figure>
+
+I'm also pretty happy with how the colors turned out! The entire base palette uses [named HTML colors](https://htmlcolorcodes.com/color-names/), just to keep it simple, but the real magic is in the shader nodes. [Voilà:](https://old.reddit.com/r/blender/comments/1eqlwuw/no_idea_how_to_apply_hue_shifting_by_light_level/)
+
+<figure><a href="{%include url.html%}/assets/art/moff_3-compare.png" class="fg"><img src="{%include url.html%}/assets/art/moff_3-compare.png" alt="A screenshot of two moth models, one vibrant and one washed-out. Below is the base image texture, and the node tree for the shadows."></a>
+<figcaption><small>For an extra clear example, I turned the Factor all the way up on the foreground moth here. The paler duplicate ignores the Color&nbsp;Ramp entirely.</small></figcaption></figure>
+
+Realism be darned, I like colors. And doofy eyes.
+</div>
+
+<figure><a href="{%include url.html%}/assets/art/moff_3-hi.jpg" class="fg"><img src="{%include url.html%}/assets/art/moff_3-hi.jpg" alt="A side view wireframe of the moth, with its bones highlighted and statistics displayed."></a>
+  <figcaption><small>u got games on ur phone?</small></figcaption></figure>
