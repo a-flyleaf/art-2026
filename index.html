@@ -23,9 +23,9 @@ changelog:
   - date: 2026-06-14
     desc: >-
       index changelog <i>(you are here!)</i>; +[japhet](INC_URL/japhet); `#b3d` layout
-  - date: 2026-06-17
+  - date: 2026-06-25
     desc: >-
-      +[brame animal](INC_URL/brame) 
+      +[brame animal](INC_URL/brame)
 
 ---
 <section id="txt" class="wrap">
@@ -47,7 +47,7 @@ tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{
 <!--for dates I'm using whichever day the thing was "finished" on, w/e that means. details on the page itself.-->
 
 <footer class="wrap"><hr>
-	<p><small><i>updated <b>June&nbsp;14</b></i></small></p>
+	<p><small><i>updated <b>June&nbsp;25</b></i></small></p>
 
 	<details><summary>changelog</summary>{%capture inc-url%}{%include url.html%}{%endcapture%}
 		<ul>{%for c in page.changelog%}<li><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"INC_URL",inc-url}}</li>{%endfor%}</ul>

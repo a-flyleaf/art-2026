@@ -17,6 +17,9 @@ css: "
 	main,footer{padding:0 1rem;}
 	::selection{background:#000; color:#808080;}
 	
+	#img{text-align:center; padding:2rem 1rem;}
+	.img{border:1px solid #000; display:inline-block; line-height:0;} .img:hover,.img:focus,.img:active{opacity:.75; border:1px dashed #bfbfbf;}
+	
 	p{margin:1.25em 0;} .txt p:first-of-type{margin-top:0;} .txt p:last-of-type{margin-bottom:0;}
 	a{color:inherit; text-decoration-style:dashed; text-decoration-color:#9f9f9f;} a:hover,a:active,a:focus{color:#808080; text-decoration:none;}
 	.txt{background:#202020; border:1px solid #808080; padding:1em; margin:1em auto; line-height:1.5;}
@@ -27,24 +30,33 @@ css: "
 	#dt{padding:.5em 1em; border-top:1px dotted #9f9f9f;}
 	ul{margin-left:1em;} li{margin:.5em 0;}
 	
-	footer{margin-top:2em;} footer a{text-decoration:none;} footer span{color:#fff;}
+	figure{text-align:center; margin:3em auto;}
+	small{font-size:.875em;}
+	figcaption{color:#bfbfbf; line-height:1.25; padding:0 1em;} figcaption.wrap{text-align:left;}
+	
+	#multi img{max-height:500px;}
+	
+	footer{padding:2em 0;} footer a{text-decoration:none;} footer span{color:#fff;}
+	
+	#footnote{color:#9f9f9f; padding:1em; line-height:1.25;}
+	hr{margin-top:1.5em !important; border:1px dashed #808080;}
 "
 
 # cp: |-
 #  ///
 
 desc1: |-
-  Back in 2023, I cobbled together this bizarro frankendeer and called it <i>brame</i>, from [an album I was looping at the time](https://rubymydear.bandcamp.com/album/brame). More recently I thought it'd make for some neat 3D practice. Its design, like [the "sawface" lizard](https://a-flyleaf.github.io/toyshelf/misc/sawface) before it, has only ever been envisioned in solid <span style="background:#000;color:#fff;">#000000</span> black<span class="em">---</span>so whereas [last model](INC_URL/japhet) was *meant* to be shadeless solid but ended up being shiny, I ignored shadows and other 3D sensibilities on this one from the getgo and never looked back.
+  Back in 2023, I cobbled together this bizarro frankendeer and called it <i>brame</i>, from [an album I was looping at the time](https://rubymydear.bandcamp.com/album/brame). More recently I thought it'd make for some neat 3D practice. Its design has only ever been envisioned in solid <span style="background:#000;color:#fff;">#000000</span> black<span class="em">---</span>so whereas [last model](INC_URL/japhet) was *meant* to be flat but ended up shiny, I ignored shadows and other 3D sensibilities on this one from the getgo.
   
-  This turned out to be... *interesting,* considering how busy the design is with all the limbs. *Oh well.* I could probably futz with that by manually adjusting the colors of each object, but this ended up being an experiment in the compositor and (to a lesser extent) animation workflow.
+  This turned out to be... *interesting,* considering how busy the design is with all the limbs. *Oh well.* I could probably futz with that by manually adjusting the colors of each object, maybe varying it by camera distance, but this mostly ended up being an experiment in the compositor and (to a lesser extent) animation workflow.
   
   <details><summary><b>obligatory blender linkspam haul</b></summary><div id="dt">DT_BL</div></details>
   
-  <b style="text-transform:uppercase;font-weight:normal;">time taken</b>: ~14&nbsp;hours 43&nbsp;minutes, for the model & animation shown above. A turnaround and idle animation (combination thereof) were attemped and went... poorly. Things to revisit another time.
+  <b style="text-transform:uppercase;font-weight:normal;">time taken</b>: ~14&nbsp;hours 43&nbsp;minutes, for the model & animation shown above. GIF corrections made in [ezgif](https://ezgif.com/). A turnaround and idle animation (combination thereof) were attemped and went... poorly. Things to revisit another time.
 details-blender: |-
   - [changing the viewport background](https://blender.stackexchange.com/questions/164502/how-to-change-the-viewport-background-color)
   - [batch renaming bones](https://blender.stackexchange.com/questions/40279/bulk-renaming-armature-bones-after-already-creating-them)
-  - [[YouTube] using & rendering view layers](https://www.youtube.com/watch?v=gUxC_Xl4Tjk) used to make the eyes overlap everything
+  - [[YouTube] using & rendering view layers](https://www.youtube.com/watch?v=gUxC_Xl4Tjk) (used to force the eye overlap)
   - [various methods for rendering pixelated graphics](https://old.reddit.com/r/blender/comments/15d98qe/is_there_any_way_to_replicate_psx_style_pixelated/) (I used [Film > Filter&nbsp;Size](https://old.reddit.com/r/blender/comments/15d98qe/is_there_any_way_to_replicate_psx_style_pixelated/ju210zn/))
   - [adding jitter to an animation](https://blender.stackexchange.com/questions/273958/adding-jitter-to-a-constrained-camera) (exemplified with the camera but can be used for anything; I slapped it on the legs. and also the camera)
   - [[YouTube] animation layers with the NLA editor](https://www.youtube.com/watch?v=Vud9Ora9IwE)
@@ -58,12 +70,26 @@ desc2c: |-
 
 ---
 <main>
-	MAIN IMAGE
+	<section id="img"><a href="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif" target="_blank"><img src="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif" alt="gif of a deerlike amalgamation, rising shakily. Then it screams."></a></section>
 	<div class="txt wrap">{%capture incurl%}{%include url.html%}{%endcapture%}{%capture details-blender%}{{page.details-blender|markdownify}}{%endcapture%}{{page.desc1|markdownify|replace:"INC_URL",incurl|replace:"DT_BL",details-blender}}</div>
-	WIP IMAGE
-	Here’s the thing without the camera zoom/shake.
-	(+also see process files for anything funny? apparently I left the head invisible on one, that'd be good. plus maybe details that the render doesn't show well, like the split arm bones & fuckass jaw-hairs)
+	<figure>
+		<a href="{%include url.html%}/assets/art/brame_07-ui.gif" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_07-ui.gif" alt="The animation shown above, but in Blender. Shows the solid black silhouette as rendered (no background); a slightly shifted angle with separate parts outlined and no camera zoom; and a Noise modifier in the animation graph editor."></a>
+		<figcaption><small>Here’s the thing with & without camera movement. The gif colors glitched out for some reason, but I kinda dig it.</small></figcaption>
+	</figure>
+	<figure id="multi">
+		<a href="{%include url.html%}/assets/art/brame_02.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_02.jpg" alt="3/4ths view with viewport shading"></a>
+		<a href="{%include url.html%}/assets/art/brame_03.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_03.jpg" alt="side view"></a>
+		<a href="{%include url.html%}/assets/art/brame_04.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_04.jpg"></a>
+		<figcaption><small>Various process shots, ft. what happens if I hide the head object.</small></figcaption>
+	</figure>
+	<figure>
+		<a href="{%include url.html%}/assets/art/brame_09-f30.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_09-f30.jpg"></a>
+		<figcaption class="wrap"><small>Frame from the scrapped idle-turnaround, highlighting some details that aren’t clear in the render: the array of jaw-hair-teeth, the upper teeth (only one row, to make the rendered area clearer), and the split bones in the forelimbs. Ignore the gratuitous clipping here and elsewhere; as long as the silhouette works, idgaf about whether it makes 3D sense.</small></figcaption>
+	</figure>
 	
+	<div id="footnote" class="wrap"><small>[I was going to put sketch-concepts here and then actually made the page and went. hey y’know what this is fine as-is actually. <em style="text-transform:uppercase;font-style:normal;">so</em> those will happen on a separate page, and for now this footnote is here instead. anyway]</small></div>
+	
+	<!--figures now that i actually Make the page i'm like. oh it's fine actually. yeah there doesn't need to be anything else, that can be separate. AUGH
 	<hr>
 	
 	<div class="txt wrap">{{page.desc2a|markdownify}}</div>
@@ -73,10 +99,13 @@ desc2c: |-
 	<div class="txt wrap">{{page.desc2c|markdownify}}</div>
 	
 	BONUS INTERACTIVE MOODBOARD; text design notes in the figcaption? unless redundant with the image which they probably are idk
+	-->
 	
-</main>	
+</main>
+<hr class="wrap">
 <footer><div class="wrap"><a href="{%include url.html%}"><span>«</span> a-flyleaf/<b>art-2026</b></a></div></footer>
 
+<!--
 ## brame bs [6/21]
 - insp, in no particular order:
 	- [botfly deer head](https://en.wikipedia.org/wiki/File:DeerBotFlyReaumur.jpg)
@@ -91,3 +120,4 @@ desc2c: |-
 - rear legs & tail are vestigial and mostly if not entirely numb; cruxes of movement are in the clavicle & head
 - design is neither fully 2D nor 3D. the flat eye Watches from every front & side angle, does not respond to perspective; but the bulging "eye" is very much round and shiny and kinda wet. gross.
 	- there's a 3D model and design notes but those are from 2026... thinking I might like. art site first then compile it for toyshelf or wherever else? idk man the idea here is to reduce redundancy :Ic
+-->
