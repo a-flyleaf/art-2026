@@ -1,64 +1,93 @@
 ---
 layout: "00"
-title: brame animal
+title: brame animal.
 slug: brame
 tags: [3d,bodyhorror]
 date: 2026-06-11
+# ^from the displayed animation. concepts and actual page are from later BUT I want this to precede the 2d art (slade & 404 crew) so it'll keep the OG date.
 
-typ: b3d
-main: japhet_12-smooth.png
-orient: sqh
+font: <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+# if I recycle the b3d layout or at least the first part; ^font can stay regardless for the dropdown
+# main: 
+# orient: sqh
 
 css: "
-	#cp{text-align:right;}
-	#cp ul{list-style-type:none;}
-	code{background:#fff; color:#000; padding:0 .25em;}
+	body{background:#000; color:#fff; font-family:'courier new',courier,monospace;}
+	.wrap{max-width:42rem; padding:0 1rem;}
+	main,footer{padding:0 1rem;}
+	::selection{background:#000; color:#808080;}
+	
+	p{margin:1.25em 0;} .txt p:first-of-type{margin-top:0;} .txt p:last-of-type{margin-bottom:0;}
+	a{color:inherit; text-decoration-style:dashed; text-decoration-color:#9f9f9f;} a:hover,a:active,a:focus{color:#808080; text-decoration:none;}
+	.txt{background:#202020; border:1px solid #808080; padding:1em; margin:1em auto; line-height:1.5;}
+	.em::after{content:'—';}
+	
+	details{font-family:'inter',calibri,sans-serif; border:1px dashed #9f9f9f; margin:1.25em 0; color:#efefef;}
+	summary{padding:.5em 1em; color:#bfbfbf; letter-spacing:0.025em;} summary:hover,summary:active,summary:focus{background:#000; color:#efefef;}
+	#dt{padding:.5em 1em; border-top:1px dotted #9f9f9f;}
+	ul{margin-left:1em;} li{margin:.5em 0;}
+	
+	footer{margin-top:2em;} footer a{text-decoration:none;} footer span{color:#fff;}
 "
 
-cp: |-
-  - May 20, 2026 (with renders on the 27--28th)
-  - <b>time taken</b>: ~15.25 hours
+# cp: |-
+#  ///
+
+desc1: |-
+  Back in 2023, I cobbled together this bizarro frankendeer and called it <i>brame</i>, from [an album I was looping at the time](https://rubymydear.bandcamp.com/album/brame). More recently I thought it'd make for some neat 3D practice. Its design, like [the "sawface" lizard](https://a-flyleaf.github.io/toyshelf/misc/sawface) before it, has only ever been envisioned in solid <span style="background:#000;color:#fff;">#000000</span> black<span class="em">---</span>so whereas [last model](INC_URL/japhet) was *meant* to be shadeless solid but ended up being shiny, I ignored shadows and other 3D sensibilities on this one from the getgo and never looked back.
+  
+  This turned out to be... *interesting,* considering how busy the design is with all the limbs. *Oh well.* I could probably futz with that by manually adjusting the colors of each object, but this ended up being an experiment in the compositor and (to a lesser extent) animation workflow.
+  
+  <details><summary><b>obligatory blender linkspam haul</b></summary><div id="dt">DT_BL</div></details>
+  
+  <b style="text-transform:uppercase;font-weight:normal;">time taken</b>: ~14&nbsp;hours 43&nbsp;minutes, for the model & animation shown above. A turnaround and idle animation (combination thereof) were attemped and went... poorly. Things to revisit another time.
+details-blender: |-
+  - [changing the viewport background](https://blender.stackexchange.com/questions/164502/how-to-change-the-viewport-background-color)
+  - [batch renaming bones](https://blender.stackexchange.com/questions/40279/bulk-renaming-armature-bones-after-already-creating-them)
+  - [[YouTube] using & rendering view layers](https://www.youtube.com/watch?v=gUxC_Xl4Tjk) used to make the eyes overlap everything
+  - [various methods for rendering pixelated graphics](https://old.reddit.com/r/blender/comments/15d98qe/is_there_any_way_to_replicate_psx_style_pixelated/) (I used [Film > Filter&nbsp;Size](https://old.reddit.com/r/blender/comments/15d98qe/is_there_any_way_to_replicate_psx_style_pixelated/ju210zn/))
+  - [adding jitter to an animation](https://blender.stackexchange.com/questions/273958/adding-jitter-to-a-constrained-camera) (exemplified with the camera but can be used for anything; I slapped it on the legs. and also the camera)
+  - [[YouTube] animation layers with the NLA editor](https://www.youtube.com/watch?v=Vud9Ora9IwE)
+
+desc2a: |-
+  Also, while it's not like the shiny new site *obliges* me to have extras with everything, I felt like this would be a little empty without. So, since I didn't use a model sheet and winged it straight from the redesign sketches, here are the aforementioned redesign sketches!
+desc2b: |-
+  The *original* design concepts can be found on Toyshelf: [initial scrawling from 2023](https://a-flyleaf.github.io/toyshelf/art/brame-concepts) and [these random headshots](https://a-flyleaf.github.io/toyshelf/art/brame-heads). Bla bla what is consistency I don't know how the eyes keep getting flipped. Last but certainly not least, here are some design notes from *after* I set the model aside (for now):
+desc2c: |-
+  Maybe I will punt it to ArtFight. Maybe it will have to keep haunting this page. Who knows. I am picking it up with tweezers and flinging it out the window.
+
 ---
-<div class="wrap" markdown="1">
-A character design that has inexplicably stuck with me is Japhet [<i>OFF</i>game](https://offtherpg.com/). Cat eats birb, birb puppets cat from within, birb bursts out of cat's mouth pixel-horror-style in the buildup to the boss fight. It's pretty cool!
+<main>
+	MAIN IMAGE
+	<div class="txt wrap">{%capture incurl%}{%include url.html%}{%endcapture%}{%capture details-blender%}{{page.details-blender|markdownify}}{%endcapture%}{{page.desc1|markdownify|replace:"INC_URL",incurl|replace:"DT_BL",details-blender}}</div>
+	WIP IMAGE
+	Here’s the thing without the camera zoom/shake.
+	(+also see process files for anything funny? apparently I left the head invisible on one, that'd be good. plus maybe details that the render doesn't show well, like the split arm bones & fuckass jaw-hairs)
+	
+	<hr>
+	
+	<div class="txt wrap">{{page.desc2a|markdownify}}</div>
+	CONCEPTS & TRANSCRIPTIONS
+	<div class="txt wrap">{{page.desc2b|markdownify}}</div>
+	6/21 DESIGNNOTES & TRANSCRIPT
+	<div class="txt wrap">{{page.desc2c|markdownify}}</div>
+	
+	BONUS INTERACTIVE MOODBOARD; text design notes in the figcaption? unless redundant with the image which they probably are idk
+	
+</main>	
+<footer><div class="wrap"><a href="{%include url.html%}"><span>«</span> a-flyleaf/<b>art-2026</b></a></div></footer>
 
-<figure><iframe width="560" height="315" src="https://videopress.com/embed/ihs3k9EB" frameborder="0" allowfullscreen allow="clipboard-write"></iframe><script src="https://videopress.com/videopress-iframe.js"></script><!--https://aflyleaf3.wordpress.com/2017/03/17/hhhh-2-hours-and-35-layers-later-have-an/-->
-<figcaption><small>Animation I made in 2017<!--3/17, 2hours 35frames-->, inspired stylistically by the films of William&nbsp;Kentridge. Haven’t revisited the technique since, but I dig the visual effect.</small></figcaption></figure>
-
-Anyway, this was a great modeling challenge. Did a big complicated rig All By Myself™! He's not T-posed by default but whatever!! Features a smidge of Grease&nbsp;Pencil for the eye & beak outlines, some crumb of [scenery](https://lparchive.org/OFF/Update%2012/), and one of Blender's default [HDRI](https://www.youtube.com/watch?v=QNr7lwhW0h4)s for the lighting.
-
-<figure><a href="{%include url.html%}/assets/art/japhet_ref+00+03.jpg" class="fg"><img src="{%include url.html%}/assets/art/japhet_ref+00+03.jpg" alt="Model process shots: the original side view silhouette-sketch, a boxy mirrored wireframe, and a silhouetted shot of the upper body."></a>
-<figcaption><small>The more I model, the more I realize I don’t actually like sticking to a tightly-defined turnaround drawing. Stuff changes as I tweak vertices constantly.</small></figcaption></figure>
-
-My initial plan was for a `#ffffff` (all white) model, shadeless or [cel-only](https://youtu.be/tWcaQ3gCbUU?t=149), with physics on Valerie (the cat) to make him all limp. But I like shiny materials and, despite the tedium, to have full control over bone positioning. Main thing I learned with this model ended up being how bone groups and (some) constraints work. Did not use Rigify, but generated and poked around at its default models to get a better sense of how it actually works.
-
-<figure><a href="{%include url.html%}/assets/art/japhet_10.jpg" class="fg"><img src="{%include url.html%}/assets/art/japhet_10.jpg" alt="A T-pose of the model with all bones visible."></a>
-<figcaption><small>In this house we appreciate YouTube tutorial-maker Royal&nbsp;Skies, StackExchange randos, and a bunch of other pseudonymous heroes linked at the end of this page.</small></figcaption></figure>
-
-As a side note, the shading is only super shiny and reflective-looking like this with Blender's Smooth shading turned all the way on. Compare the main render [above]({%include url.html%}/assets/art/japhet_12-smooth.png) to the auto-smoothed version:
-
-<figure><a href="{%include url.html%}/assets/art/japhet_12-autosmooth.png" class="fg"><img src="{%include url.html%}/assets/art/japhet_12-autosmooth.png" alt="Model process shots: the original side view silhouette-sketch, "></a>
-<figcaption><small>Flatter, yet closer to my original concept.</small></figcaption></figure>
-
-The wing bones could be tweaked further for ease of use, but overall I'm happy with how this turned out! Have some resource linkspam...
-
-<details><summary><big><b>resources used</b> and other techy footnotes</big></summary>
-<div class="dt" markdown="1">
-- YouTube: [<b>Inverse Kinematics in 2 Minutes</b>](https://www.youtube.com/watch?v=Pt3-mHBCoQk). Uses Blender&nbsp;2.8 but still entirely workable, give or take the UI <small>(user&nbsp;interface, menus buttons etc.)</small>.
-- StackExchange: [<b>keeping IK feet flat</b>](https://blender.stackexchange.com/questions/91802/keep-rig-feet-flat-on-the-ground-ik-rig). Now *that's* an old UI!
-- YT: [<b>Rigging Eyes in 60 Seconds</b>](https://www.youtube.com/watch?v=xSsav9wlDwI). Japhet's eyes don't move, but I used this for the head; it follows a single bone floating in front of the beak, carrot-on-a-stick style.
-- YT: [animating a tail (short)](https://www.youtube.com/shorts/GrH4HP5elvs) + [<b>I poorly explain the damped track constraint</b>](https://www.youtube.com/watch?v=SMZam1zFAz4). I considered using this for the wings, but ended up preferring [Copy Rotation](https://docs.blender.org/manual/en/latest/animation/constraints/transform/copy_rotation.html) for more control.
-- YT: [<b>How to Join or Combine Armatures</b>](https://www.youtube.com/watch?v=oj_2_1XkgNw). TL;DR join it, then re-parent the child's root bone(s) accordingly.
-- r/blenderHelp: [unifying bone colors](https://old.reddit.com/r/blenderhelp/comments/18zuybs/trouble_giving_bones_collection_unanimous_colour/l0twyu2/). `ALT` is key!
-- StackExchange: [parenting Grease Pencil to an armature](https://blender.stackexchange.com/questions/90915/how-to-parent-a-grease-pencil-with-armature). Not mentioned: You also need to assign the Grease Pencil Layer to a specific bone through the Relations dropdown!
-- StackExchange: [disabling Grease Pencil overlap](https://blender.stackexchange.com/questions/248755/my-render-shows-the-grease-pencil-on-the-front-and-backside-of-my-3d-object-x-r/344462#344462). auuughhh
-- YT: [<b>Light Linking (Quick)</b>](https://www.youtube.com/watch?v=G2p760rvGNk), used in the final render to highlight Japhet's head and not Valerie.
-</div></details>
-
-...and a bird dab.
-
-<figure><a href="{%include url.html%}/assets/art/japhet_13b2-dab.png" class="fg"><img src="{%include url.html%}/assets/art/japhet_13b2-dab.png" alt="Japhet doing a dab."></a></figure>
-
-<figure><a href="{%include url.html%}/assets/art/japhet_13b3-dabspin.gif" class="fg"><img src="{%include url.html%}/assets/art/japhet_13b3-dabspin.gif" alt="Japhet turnaround, still hitting that dab."></a>
-<figcaption><small>This pose was only made to look good as a static image, but I thought it’d make a funny turnaround. Millennial go spin.</small></figcaption></figure>
-</div>
+## brame bs [6/21]
+- insp, in no particular order:
+	- [botfly deer head](https://en.wikipedia.org/wiki/File:DeerBotFlyReaumur.jpg)
+	- [brame album](https://rubymydear.bandcamp.com/album/brame) (via [the playlist of a deer OC](https://open.spotify.com/playlist/4hPLLN7xJhzX0SSJDzCbjZ), although no (deliberate) design insp was taken here)
+	- [boisvert](https://www.youtube.com/@_boisvert163/videos) eyes (much like hellrabbit)
+	- mantis arms
+	- [bubbblebaath art](https://bubblebaath.tumblr.com/post/174097772155/group-pic)
+	- antler picked off [balloon album](https://rubymydear.bandcamp.com/album/balloon)
+	- taffly & reddhott
+	^ yeah it's kind of A Lot
+- has a voice like brame album screaming (think midway through [this one](https://rubymydear.bandcamp.com/track/an-mone)) but also boisvert whisper? idk. has changed a Lot from the original concept already
+- rear legs & tail are vestigial and mostly if not entirely numb; cruxes of movement are in the clavicle & head
+- design is neither fully 2D nor 3D. the flat eye Watches from every front & side angle, does not respond to perspective; but the bulging "eye" is very much round and shiny and kinda wet. gross.
+	- there's a 3D model and design notes but those are from 2026... thinking I might like. art site first then compile it for toyshelf or wherever else? idk man the idea here is to reduce redundancy :Ic
