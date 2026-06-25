@@ -1,3 +1,6 @@
+# brame 2d concepts
+see /brame, everything's in that page's code for now
+
 # 6/21: hipster 'yote
 	Recently trawled through my [Toyshelf]() again, got reminded of this fella---particularly his [one-off Halloween plush](). Sometimes one has to draw their >decade-old self-insert as an anthro, as a treat.
 	
