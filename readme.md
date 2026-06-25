@@ -1,1 +1,1 @@
-Art by [a-flyleaf](https://a-flyleaf.github.io/), from 2026 specifically. Because the backlog is over a decade long, and I'm tired of using other sites to post things.
+Art by [a-flyleaf](https://a-flyleaf.github.io/), from 2026 specifically.
