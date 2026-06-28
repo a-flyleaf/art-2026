@@ -15,14 +15,21 @@ css: "
 	body{background:#000; color:#fff; font-family:'courier new',courier,monospace;}
 	.wrap{max-width:42rem; padding:0 1rem;}
 	main,footer{padding:0 1rem;}
-	::selection{background:#000; color:#808080;}
+	::selection{background:#000; color:#404040;}
 	
-	#img{text-align:center; padding:2rem 1rem;}
+	#img{text-align:center; padding:5rem 1rem;}
 	.img{border:1px solid #000; display:inline-block; line-height:0;} .img:hover,.img:focus,.img:active{opacity:.75; border:1px dashed #bfbfbf;}
+	
+	#info{color:#808080; overflow:auto; width:100%; padding-bottom:3.5em;}
+	h1,#info small{width:50%; float:left;}
+	h1{letter-spacing:.075em;}
+	#info small{text-align:right; font-style:italic;}
+	#info+hr{max-width:44rem; margin:2.5em auto; border-color:#404040;}
 	
 	p{margin:1.25em 0;} .txt p:first-of-type{margin-top:0;} .txt p:last-of-type{margin-bottom:0;}
 	a{color:inherit; text-decoration-style:dashed; text-decoration-color:#9f9f9f;} a:hover,a:active,a:focus{color:#808080; text-decoration:none;}
 	.txt{background:#202020; border:1px solid #808080; padding:1em; margin:1em auto; line-height:1.5;}
+	.txt ::selection{color:#808080;}
 	.em::after{content:'—';}
 	
 	details{font-family:'inter',calibri,sans-serif; border:1px dashed #9f9f9f; margin:1.25em 0; color:#efefef;}
@@ -71,12 +78,20 @@ desc2c: |-
 ---
 <main>
 	<section id="img"><a href="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif" target="_blank"><img src="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif" alt="gif of a deerlike amalgamation, rising shakily. Then it screams."></a></section>
+	
+	<section id="info"><div class="wrap">
+		<h1>{{page.title}}</h1>
+		<small>June 2026</small>
+	</div></section>
+	
+	<hr>
+	
 	<div class="txt wrap">{%capture incurl%}{%include url.html%}{%endcapture%}{%capture details-blender%}{{page.details-blender|markdownify}}{%endcapture%}{{page.desc1|markdownify|replace:"INC_URL",incurl|replace:"DT_BL",details-blender}}</div>
 	<figure>
 		<a href="{%include url.html%}/assets/art/brame_07-ui.gif" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_07-ui.gif" alt="The animation shown above, but in Blender. Shows the solid black silhouette as rendered (no background); a slightly shifted angle with separate parts outlined and no camera zoom; and a Noise modifier in the animation graph editor."></a>
 		<figcaption><small>Here’s the thing with & without camera movement. The gif colors glitched out for some reason, but I kinda dig it.</small></figcaption>
 	</figure>
-	<figure id="multi">
+	<figure id="multi"><!--these can be one (1) image I think-->
 		<a href="{%include url.html%}/assets/art/brame_02.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_02.jpg" alt="3/4ths view with viewport shading"></a>
 		<a href="{%include url.html%}/assets/art/brame_03.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_03.jpg" alt="side view"></a>
 		<a href="{%include url.html%}/assets/art/brame_04.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_04.jpg"></a>
@@ -87,9 +102,9 @@ desc2c: |-
 		<figcaption class="wrap"><small>Frame from the scrapped idle-turnaround, highlighting some details that aren’t clear in the render: the array of jaw-hair-teeth, the upper teeth (only one row, to make the rendered area clearer), and the split bones in the forelimbs. Ignore the gratuitous clipping here and elsewhere; as long as the silhouette works, idgaf about whether it makes 3D sense.</small></figcaption>
 	</figure>
 	
-	<div id="footnote" class="wrap"><small>[I was going to put sketch-concepts here and then actually made the page and went. hey y’know what this is fine as-is actually. <em style="text-transform:uppercase;font-style:normal;">so</em> those will happen on a separate page, and for now this footnote is here instead. anyway]</small></div>
+	<div id="footnote" class="wrap"><small>[I was going to put sketch-concepts here and then actually made the page and went. hey y’know what this is fine as-is. <em style="text-transform:uppercase;font-style:normal;">so</em> those will happen on a separate page, and for now this footnote is here instead. anyway]</small></div>
 	
-	<!--figures now that i actually Make the page i'm like. oh it's fine actually. yeah there doesn't need to be anything else, that can be separate. AUGH
+	<!--
 	<hr>
 	
 	<div class="txt wrap">{{page.desc2a|markdownify}}</div>
