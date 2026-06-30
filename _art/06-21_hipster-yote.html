@@ -1,0 +1,71 @@
+---
+layout: "00"
+title: hipster ’yote
+slug: hipster-yote
+tags: [2d,sladeauctor]
+date: 2026-06-21
+
+css: "
+	body{font-family:arial,sans-serif; background:#f0f0f0;}
+	.wrap{max-width:40em; padding:1em;}
+	::selection{background:#bad4e8;}
+	a{color:inherit; text-decoration:underline dashed 1px;} a:hover,a:focus,a:active{background:#9dd1f8; text-decoration:none;}
+	
+	header,footer{font-family:'arial narrow',arial,sans-serif; letter-spacing:0.025em;}
+	main{background:#707070; border-top:1px solid #a0a0a0;}
+	
+	header .wrap{overflow:auto; width:100%;}
+	h1{float:left;} header span{float:right;}
+	
+	#img{padding:1em 1em 0; text-align:center;} #img+.wrap{padding-top:0;}
+	#img a{display:inline-block; background-color:#808080; background-image:url(https://a-flyleaf.github.io/art/bg.png); background-size:12px; border:1px solid #707070;} #img a:focus,#img a:active,#img a:hover{background:#808080; border:1px dashed #000;}
+	.nobg a{padding:1em;}
+	
+	.box{background:#f0f0f0; padding:1em 1.25em; margin:1em 0;}
+	.box p,.box fgure{line-height:1.45; margin:1em 0;} .box p:first-of-type{margin-top:0;} .box p:last-of-type{margin-bottom:0;}
+	
+	hr{border:0; height:3em;}
+	
+	figure{padding:0 1em; margin:0 auto; text-align:center;}
+	figcaption.wrap{text-align:left; padding:0 1em;} figcaption .box{margin:0 auto;}
+	
+	footer a{text-decoration:none;}
+	
+	/*page-specific?*/ figure{max-width:1200px;}
+	/*can be extrapolated for the main image also?*/ .img{line-height:0; border:2px dashed; display:inline-block;} .img:hover,.img:focus,.img:active{background:#fff; opacity:.75;}
+"
+
+desc1: |-
+  Recently trawled through my [Toyshelf](https://a-flyleaf.github.io/toyshelf/) again, got reminded of this fella---particularly his [one-off Halloween plush](https://a-flyleaf.github.io/toyshelf/art/plushies). Sometimes one has to draw their >decade-old self-insert as an anthro, as a treat.
+figure:
+  url: hipster_wips.jpg
+  figcaption: |-
+    Animal head and legs on a human(oid) torso, no problem. Arms and hands, meanwhile... *eh.* Slade's peculiar underside markings didn't really help. He also looked barefoot with full detail and bare feet, so *bam*, blocky loafers be upon ye.
+    
+    Shirt lines were automatic via FireAlpaca's built-in parallel line   tool; didn't feel like drawing all that around the body proper. Pocket placement is also a little odd since, if you squint, he was originally supposed to be holding some kind of satchel but I scrapped that in lining. *Oh well* little self-crits to keep in mind next time...!!
+    
+    Last but not least, I don't really know how glasses or shoes work with furry anatomy, but the former took a cue from [this reddit post](https://old.reddit.com/r/furry/comments/10v0sbw/you_know_normal_glasses_just_wouldnt_work_on_most/j7g5erl/). Extremely nerdy, which isn't not fitting.
+desc2: |-
+  <b style="font-weight:normal;text-transform:uppercase;">time taken</b>: ~3 hours. Not bad for a fullbody! Would've taken a lot longer if I added fur detail or cel shading, but I thought it looked nice enough semi-flat like this.
+---
+<header><div class="wrap">
+	<h1>{{page.title}}</h1>
+	<span>{{page.date|date:"%B %e"}}</span>
+</div></header>
+<main>
+	<section id="img" class="nobg"><a href="{%include url.html%}/assets/art/hipster-yote.png" target="_blank"><img src="{%include url.html%}/assets/art/hipster-yote.png" alt=""></a></section>
+	
+	<div class="wrap"><div class="box">{{page.desc1|markdownify}}</div></div>
+	
+	<hr>
+	
+	<figure>
+		<a href="{%include url.html%}/assets/art/{{page.figure.url}}" target="_blank" class="img"><img src="{%include url.html%}/assets/art/{{page.figure.url}}" alt="process shots of the drawing"></a>
+		<figcaption class="wrap"><div class="box">{{page.figure.figcaption|markdownify}}</div></figcaption>
+	</figure>
+	
+	<div class="wrap"><div class="box">{{page.desc2|markdownify}}</div></div>
+	
+	<hr>
+</main>
+<footer><div class="wrap"><a href="{%include url.html%}">a-flyleaf/<b>art-2026</b></a></div></footer>
