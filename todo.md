@@ -2,7 +2,6 @@
 - prefers:light for the b3d theme? using blender's ancient UI as a base maybe, or see if there's a built-in light mode. (can stay dark for brame tho it's part of the #vibe.)
 	- varying layouts/color schemes can also be noted on the index, if I go ahead with this
 - simple javascript click-zoom from /ygbtdm? on #fa mostly, but could be doable on #b3d with some addiitonal CSS fuckery
-- MAIN IMAGE ALT TEXT.
 
 # TBA
 ## brame 2d concepts
@@ -14,14 +13,7 @@ you gotta update that site first tho. as for date make it uhhhh 7/31, since that
 
 	### 8/05 tadc revisit lol
 	page: /tad404 | The Amazing Digital 404s
-	alt: Four characters on their way to the movie theaters. Left to right:
-	1, marching merrily: I think this will give me an existential crisis!
-	2, shrugging away from her: you're *always* having an existential crisis. (1: Touche!)
-	3, holding the popcorn which 2 is picking from: Mm. Personally, I think the pertinence of its themes makes it all the more relevant to---
-	4, interrupting, walking ahead and also backwards to yell at the ohers: will u slowpokes *hurry tf up?!!!*
-	There's a poster in the background of a jester on a cross.
 	
-	#### transcript/desc
 	[2 is making a house of cards.]
 	1: Hey, Kade! [The dialogue slams into the cards and 2 flinches. There is a bowling strike sound effect.]
 	1, across the table: I think we should talk about our feelings! [She's spotlighting a screenshot from <i>The Amazing Digital Circus</i> episode&nbsp;3, in which Caine does talk therapy.
