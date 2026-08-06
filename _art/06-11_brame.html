@@ -77,7 +77,7 @@ desc2c: |-
 
 ---
 <main>
-	<section id="img"><a href="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif" target="_blank"><img src="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif" alt="gif of a deerlike amalgamation, rising shakily. Then it screams."></a></section>
+	<section id="img"><a href="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif"><img src="{%include url.html%}/assets/art/brame_07-ezgif-grsc-noloop.gif" alt="gif of a deerlike amalgamation, rising shakily. Then it screams."></a></section>
 	
 	<section id="info"><div class="wrap">
 		<h1>{{page.title}}</h1>
@@ -88,17 +88,17 @@ desc2c: |-
 	
 	<div class="txt wrap">{%capture incurl%}{%include url.html%}{%endcapture%}{%capture details-blender%}{{page.details-blender|markdownify}}{%endcapture%}{{page.desc1|markdownify|replace:"INC_URL",incurl|replace:"DT_BL",details-blender}}</div>
 	<figure>
-		<a href="{%include url.html%}/assets/art/brame_07-ui.gif" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_07-ui.gif" alt="The animation shown above, but in Blender. Shows the solid black silhouette as rendered (no background); a slightly shifted angle with separate parts outlined and no camera zoom; and a Noise modifier in the animation graph editor."></a>
+		<a href="{%include url.html%}/assets/art/brame_07-ui.gif" class="img"><img src="{%include url.html%}/assets/art/brame_07-ui.gif" alt="The animation shown above, but in Blender. Shows the solid black silhouette as rendered (no background); a slightly shifted angle with separate parts outlined and no camera zoom; and a Noise modifier in the animation graph editor."></a>
 		<figcaption><small>Here’s the thing with & without camera movement. The gif colors glitched out for some reason, but I kinda dig it.</small></figcaption>
 	</figure>
 	<figure id="multi"><!--these can be one (1) image I think-->
-		<a href="{%include url.html%}/assets/art/brame_02.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_02.jpg" alt="3/4ths view with viewport shading"></a>
-		<a href="{%include url.html%}/assets/art/brame_03.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_03.jpg" alt="side view"></a>
-		<a href="{%include url.html%}/assets/art/brame_04.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_04.jpg"></a>
+		<a href="{%include url.html%}/assets/art/brame_02.jpg" class="img"><img src="{%include url.html%}/assets/art/brame_02.jpg" alt="3/4ths view with viewport shading"></a>
+		<a href="{%include url.html%}/assets/art/brame_03.jpg" class="img"><img src="{%include url.html%}/assets/art/brame_03.jpg" alt="side view"></a>
+		<a href="{%include url.html%}/assets/art/brame_04.jpg" class="img"><img src="{%include url.html%}/assets/art/brame_04.jpg"></a>
 		<figcaption><small>Various process shots, ft. what happens if I hide the head object.</small></figcaption>
 	</figure>
 	<figure>
-		<a href="{%include url.html%}/assets/art/brame_09-f30.jpg" target="_blank" class="img"><img src="{%include url.html%}/assets/art/brame_09-f30.jpg"></a>
+		<a href="{%include url.html%}/assets/art/brame_09-f30.jpg" class="img"><img src="{%include url.html%}/assets/art/brame_09-f30.jpg"></a>
 		<figcaption class="wrap"><small>Frame from the scrapped idle-turnaround, highlighting some details that aren’t clear in the render: the array of jaw-hair-teeth, the upper teeth (only one row, to make the rendered area clearer), and the split bones in the forelimbs. Ignore the gratuitous clipping here and elsewhere; as long as the silhouette works, idgaf about whether it makes 3D sense.</small></figcaption>
 	</figure>
 	

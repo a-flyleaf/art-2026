@@ -1,6 +1,5 @@
 # site thigns
 ## 6/30
-- normalize whether figures open in new tabs & note as much on the homepage
 - prefers:light for the b3d theme? using blender's ancient UI as a base maybe, or see if there's a built-in light mode. (can stay dark for brame tho it's part of the #vibe.)
 	- varying layouts/color schemes should also be noted on the index
 - after 1 or 2 more 2D arts are in, give 'em a proper page type & CSS. b3d blender, fa firealpaca...
