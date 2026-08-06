@@ -7,20 +7,23 @@
 	<style>{{page.css}}</style>{%endif%}
 </head>
 <body{%if page.typ%} id="{{page.typ}}"{%endif%}{%if page.class%} class="{{page.class}}"{%endif%}>
-	{%if page.typ=="b3d"%}
+	{%if page.typ=="b3d" or page.typ=="fa"%}<!--is art page-->{%if page.typ=="fa"%}<header><div class="wrap">
+		<h1>{{page.title}}</h1>
+		<span>{{page.date|date:"%B %e"}}</span>
+	</div></header>{%endif%}
 	<main>
-		<section id="main" class="{{page.orient}}">
-			<div class="col"><a href="{%include url.html%}/assets/art/{{page.main}}" target="_blank" id="img"><img src="{%include url.html%}/assets/art/{{page.main}}" alt=""></a></div>
+		<section id="main" class="{{page.img-class}}">
+			{%if page.typ=="b3d"%}<div class="col">{%endif%}<a href="{%include url.html%}/assets/art/{{page.main}}" target="_blank" id="img"><img src="{%include url.html%}/assets/art/{{page.main}}" alt=""></a>{%if page.typ=="b3d"%}</div>
 			<div id="cp" class="wrap col">
 				<h1>{{page.title}}</h1>
 				{{page.cp|markdownify}}
-			</div>
+			</div>{%endif%}
 		</section>
 
 		<section id="desc">{{content|markdownify}}</section>
 	</main><hr><footer><div class="wrap">
-		<small><a href="{%include url.html%}">a-flyleaf ◇ <b>art-2026</b></a></small>
+		<small><a href="{%include url.html%}">a-flyleaf{%if page.typ=="b3d"%} ◇ {%elsif page.typ=="fa"%}/{%endif%}<b>art-2026</b></a></small>
 	</div></footer>
-	{%else%}{{content}}{%endif%}
+	{%else%}<!--is not art page-->{{content}}{%endif%}
 </body>
 </html>
