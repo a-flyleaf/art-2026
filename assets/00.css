@@ -5,6 +5,7 @@ header,nav,main,section,footer{display:block;}
 .wrap{margin:0 auto;}
 img{max-width:100%;height:auto;}
 summary{cursor:pointer;}
+.sc{text-transform:uppercase;} b.sc{font-weight:normal;} .noi{font-style:normal;}
 
 /*index, 404*/
 #index{font-family:verdana,sans-serif;}
@@ -48,7 +49,7 @@ summary{cursor:pointer;}
 }
 #b3d #img:active,#b3d #img:focus,#b3d #img:hover{opacity:.75;}
 #b3d h1{font-size:2em; font-style:italic; border-bottom:1px solid #4a4a4a; padding:.25em 0; color:#b8b8b8;}
-#b3d #cp ul{margin:.5em 0 1em 1em;} #b3d #cp li{font-size:.75em; line-height:1.5; margin:.5em 0;} #b3d #cp li b{font-weight:normal; text-transform:uppercase;}
+#b3d #cp ul{margin:.5em 0 1em 1em;} #b3d #cp li{font-size:.75em; line-height:1.5; margin:.5em 0;}
 
 #b3d .wrap{max-width:44rem; padding:0 1em;}
 #b3d p{line-height:1.5; margin:1em 0;}
