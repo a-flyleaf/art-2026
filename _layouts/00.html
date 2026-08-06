@@ -12,7 +12,7 @@
 		<span>{{page.date|date:"%B %e"}}</span>
 	</div></header>{%endif%}
 	<main>
-		<section id="main" class="{{page.img-class}}">
+		<section id="main"{%if page.img-class%} class="{{page.img-class}}"{%endif%}>
 			{%if page.typ=="b3d"%}<div class="col">{%endif%}<a href="{%include url.html%}/assets/art/{{page.main}}" target="_blank" id="img"><img src="{%include url.html%}/assets/art/{{page.main}}" alt=""></a>{%if page.typ=="b3d"%}</div>
 			<div id="cp" class="wrap col">
 				<h1>{{page.title}}</h1>

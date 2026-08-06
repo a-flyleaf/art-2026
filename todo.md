@@ -2,22 +2,17 @@
 - prefers:light for the b3d theme? using blender's ancient UI as a base maybe, or see if there's a built-in light mode. (can stay dark for brame tho it's part of the #vibe.)
 	- varying layouts/color schemes can also be noted on the index, if I go ahead with this
 - simple javascript click-zoom from /ygbtdm? on #fa mostly, but could be doable on #b3d with some addiitonal CSS fuckery
+- MAIN IMAGE ALT TEXT.
 
 # TBA
 ## brame 2d concepts
 see /brame, everything's in that page's code for now
 ^update some are on artfight now go figure. when That site gets updated, if I still don't have any 2026 roundups then I might as well link it there
 
-## 6/22: movie day
-	In 2018 I played <i>Doki&nbsp;Doki Literature&nbsp;Club!</i> and got so fixated on the incomplete-reality!glitched-game!world (with four people stuck in it) concept that the whole thing turned into the original project [<i style="font-family:consolas,monospace">404</i>]. It launched briefly as a web-based ?comic-site-thing, then petered out when I got stuck on a scene and became dissatisfied with the story in general.
-	
-	Anyway, it sounds like <i>The Amazing Digital Circus</i> does everything thematically that I wanted to accomplish with <i style="font-family:consolas,monospace">404</i> and then some. I haven't watched it yet because I don't like getting into things that are still in progress. The finale premiered on YouTube a few days ago, it continues to sound extremely relevant to my interests, and rather than start watching it I drew this.
-	
-	time taken: ~3&nbsp;hours. Background Pomni crucifixion from [a neat article about the series](https://www.cartoonbrew.com/interviews/the-amazing-digital-circus-creator-gooseworx-on-developing-the-internets-hottest-animated-pilot-234217.html). Follow-up art TBA, maybe.
-	
-	(+include the bonus movie day doodle? from 2018 March)
-	
-	### 8/05 revisit lol
+## artfight lol
+you gotta update that site first tho. as for date make it uhhhh 7/31, since that's when the birb was done & I wanna show some alternate views of That One Specifically
+
+	### 8/05 tadc revisit lol
 	page: /tad404 | The Amazing Digital 404s
 	alt: Four characters on their way to the movie theaters. Left to right:
 	1, marching merrily: I think this will give me an existential crisis!

@@ -82,13 +82,14 @@ summary{cursor:pointer;}
 
 #fa #main{padding:1em 1em 0; text-align:center;}
 #fa #main+.wrap{padding-top:0;}
-#fa #img{display:inline-block; background-color:#808080; background-image:url(https://a-flyleaf.github.io/art-2026/assets/24x24.png); background-size:12px; border:1px solid #707070;}
+#fa #img{display:inline-block; background-color:#808080; background-image:url(https://a-flyleaf.github.io/art-2026/assets/24x24.png); background-size:12px; border:1px solid #707070; line-height:0;}
 #fa #img:focus,#fa #img:active,#fa #img:hover{background:#808080; border:1px dashed #000;}
 /*#img img{max-height:90vh;} EGHHH... see if I can implement the simple zoom javascript like ygbtdm uses*/
 #fa .nobg a{padding:1em;}
 
 #fa .box{background:#f0f0f0; padding:1em 1.25em; margin:1em 0;}
 #fa .box p,#fa .box figure{line-height:1.45; margin:1em 0;} #fa .box p:first-of-type{margin-top:0;} #fa .box p:last-of-type{margin-bottom:0;}
+#fa main small{font-size:.8em;}
 
 #fa figure{padding:0 1em; margin:0 auto; text-align:center; max-width:1200px;}
 #fa figcaption{text-align:left;}
