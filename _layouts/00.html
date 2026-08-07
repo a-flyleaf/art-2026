@@ -11,14 +11,14 @@
 		<h1>{{page.title}}</h1>
 		<span>{{page.date|date:"%B %e"}}</span>
 	</div></header>{%endif%}
-	<main>
+	<main>{%if page.main%}
 		<section id="main"{%if page.img-class%} class="{{page.img-class}}"{%endif%}>
 			{%if page.typ=="b3d"%}<div class="col">{%endif%}<a href="{%include url.html%}/assets/art/{{page.main}}" target="_blank" id="img"><img src="{%include url.html%}/assets/art/{{page.main}}" alt="{{page.alt|markdownify|remove:'<p>'|remove:'</p>'|strip_newlines}}"></a>{%if page.typ=="b3d"%}</div>
 			<div id="cp" class="wrap col">
 				<h1>{{page.title}}</h1>
 				{{page.cp|markdownify}}
 			</div>{%endif%}
-		</section>
+		</section>{%endif%}
 
 		<section id="desc">{{content|markdownify}}</section>
 	</main><hr><footer><div class="wrap">
