@@ -8,9 +8,6 @@
 see /brame, everything's in that page's code for now
 ^update some are on artfight now go figure. when That site gets updated, if I still don't have any 2026 roundups then I might as well link it there
 
-## artfight lol
-you gotta update that site first tho. as for date make it uhhhh 7/31, since that's when the birb was done & I wanna show some alternate views of That One Specifically
-
 	### 8/05 tadc revisit lol
 	page: /tad404 | The Amazing Digital 404s
 	
