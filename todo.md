@@ -2,6 +2,7 @@
 - prefers:light for the b3d theme? using blender's ancient UI as a base maybe, or see if there's a built-in light mode. (can stay dark for brame tho it's part of the #vibe.)
 	- varying layouts/color schemes can also be noted on the index, if I go ahead with this
 - simple javascript click-zoom from /ygbtdm? on #fa mostly, but could be doable on #b3d with some addiitonal CSS fuckery
+- futz with the #fa figcaptions, the white-on-gray is a nice default for everything (Slade's paragraphs can be outside the figure)
 
 # TBA
 ## brame 2d concepts
@@ -43,11 +44,3 @@ see /brame, everything's in that page's code for now
 	[IMG]
 	
 	Time taken: not recorded; my browser history suggests about 9&nbsp;hours, on and off, for both comics (including 3D, not including webpage).
-
-## 8/04 records of strangers
-	Doodle that I felt like uploading on its own ~~largely because I still haven't made any roundups for this year lol whoops~~. I recently uploaded some old art of [these two](https://a-flyleaf.github.io/toyshelf/disaster-crew) to Toyshelf, which naturally had me thinking about them and that entire storyline again. It's a lot..! Anyway, this was meant to be a style test, but clean lines and cel shading happened instead.
-	
-	[obligatory WIPs]
-	Dialogue is slightly different between these, yes. There's no story context but "actually" didn't quite fit the character; then I realized "y'see" doesn't fit the tongue shape and I didn't feel like redrawing it.
-	
-	Something something do the kids even know what Vine is these days, idk, I don't miss it. Cartoonishly-exaggerated expressions are fun but not always in-character. Increasingly funny to revisit young-adult characters who I made/developed as a real-life teenager. Yeah, they definitely have their entire lives set in stone forever at -checks watch- 19 and 22. That's exactly how things work.
