@@ -1,6 +1,6 @@
 ---
 layout: "00"
-title: The Amazing Digital 404s
+title: The Amazing Digital 404
 slug: tad404
 tags: [404]
 date: 2026-08-05
@@ -9,23 +9,24 @@ typ: fa
 # main: this one's weird hold on
 
 css: "
-	body,header,#first.box,footer{background:#000; color:#fff;}
-	#fa ::selection{background:#000; color:#808080;} #fa img::selection{background:0;}
+	body{background:#000;}
+	header,#first.box,footer{background:#000; color:#fff;}
+	#fa header ::selection,#fa footer ::selection,#s404 ::selection{background:#000; color:#808080;} #fa img::selection{background:0;}
 	#fa header,#fa footer{font-family:consolas,monospace; font-size:.85em; color:#b7b7b7;}
 	h1,footer b{font-weight:normal;}
 	header span{color:#000; cursor:default;} header span::after{content:'2026-08-05'; color:#808080;} header span::selection{color:#000 !important;}
 	
 	#fa main{background-image:url(./assets/24x24.png); background-attachment:fixed; background-size:24px; background-position:center; border-top:1px solid #000 /*getting rid of it altogether messes with the margins*/}
 	.box#first{text-align:center; margin:2.5em auto;}
-	.box p{font-family:serif; font-size:1.15em;}
+	#s404 .box p{font-family:serif;}
 	#fa a:hover,#fa a:active,#fa a:focus{background:#484848; color:#fff;}
 	
 	details{text-align:center;}
 	summary{list-style:none; cursor:default; display:inline-block; border:0;} summary::marker,details>summary::-webkit-details-marker{display:none;}
 	#pt1{background:rgba(255,255,255,.85);}
-	#pt2{background:rgba(0,0,0,.75);}
-	#fa details .wrap{padding:2em 1em 3em;}
-	.script{font-family:consolas,monospace; text-align:left; font-size:1.15em; padding:1em; line-height:1.5;}
+	#pt2{background:rgba(0,0,0,.75); padding-bottom:5em;}
+	#fa details.comic .wrap{padding:0 1em 3em;}
+	.script{font-family:consolas,monospace; text-align:left; padding:1em; line-height:1.5;}
 	.script br{margin-bottom:.25em;}
 	.script p+p,.script ul+p{margin-top:.75em;}
 	#pt1 .script{background:#fff; color:#000; border:2px solid #000;}
@@ -39,13 +40,24 @@ css: "
 		i i{text-decoration:underline;}
 		.script ul{margin-left:1em;} .script ul li:last-child{margin-top:.25em;}
 		big{font-size:1.5em;}
+	
+	@media only screen and (min-width:50em){
+		#s404 .box p,.script{font-size:1.15em;}
+	}
+	
+	#cmt{margin-top:3.5em; text-align:left;}
+	#cmt summary{cursor:pointer; text-align:center;} #cmt summary .box{border:2px solid #000; box-shadow:4px 4px 0 #000;} #cmt br{margin-bottom:.5em;}
+	#cmt details[open] summary .box{background:#b7b7b7; box-shadow:none; border-width:1px; color:#484848;}
+	#bla{text-align:left;}
+	#cmt figure{margin:5em auto 2em;}
 "
 ---
+<section id="s404">
 <div class="wrap"><div class="box" markdown="1" id="first">
 Follow-ups to [this doodle](movie-day), sort of. Check that one out first!
 </div></div>
 
-<details id="pt1" OPEN><summary><img src="{%include url.html%}/assets/art/tad404_12.png" alt="A comic. Transcription in the dropdown."></summary><div class="wrap"><div class="script" markdown="1">
+<details id="pt1" class="comic"><summary><img src="{%include url.html%}/assets/art/tad404_12.png" alt="A comic. Transcription in the dropdown."></summary><div class="wrap"><div class="script" markdown="1">
 <i>[2 is making a house of cards.]</i>  
 <span class="s1"><b>1</b>: Hey, Kade!</span> <i>[The dialogue slams into the cards and 2 flinches. There is a bowling strike sound effect.]</i>
 
@@ -66,8 +78,8 @@ Follow-ups to [this doodle](movie-day), sort of. Check that one out first!
 <span class="s2"><b>Kade</b>: ...val?</span>  
 <span class="s1"><b>1 (Val), uncharacteristically unexpressive</b>: I did not think I would get this far!</span>
 </div></div></details>
-<details id="pt2" OPEN><summary><img src="{%include url.html%}/assets/art/tad404_34.png" alt="Another comic. Transcription in the dropdown again."></summary><div class="wrap"><div class="script" markdown="1">
-<i>[Meanwhile, the "wise and benevolent Cyrus" is wringing their scarf.]</i>  
+<details id="pt2" class="comic"><summary><img src="{%include url.html%}/assets/art/tad404_34.png" alt="Another comic. Transcription in the dropdown again."></summary><div class="wrap"><div class="script" markdown="1">
+<i>[Meanwhile, the "wise and benevolent" Cyrus is wringing their scarf.]</i>  
 <span class="s4"><b>4</b>: i ~~spawned~~ <em class="sc noi">conjured</em> an army of caine clones!</span>  
 <i>[3 (Cyrus) and 4 stand atop a blocky cliff, overlooking an army of crude MSPaint [Caine-knockoff](https://www.youtube.com/watch?v=FkXhKu80CWU) clones.</i>
 
@@ -76,5 +88,24 @@ Follow-ups to [this doodle](movie-day), sort of. Check that one out first!
 
 <span class="s4"><b>4</b>: ---**!**</span>
 
-<i>[He thinks. [He has no answer.](https://gunshowcomic.com/513)]</i>
+<i>[He thinks.  
+[[He has no answer.](https://gunshowcomic.com/513)]</i>
 </div></div></details>
+</section>
+
+<hr>
+
+<section id="cmt"><details>
+<summary><div class="wrap"><div class="box">ok now for the obligatory artist commentary<br><i>(this is a dropdown, you may click it)</i></div></div></summary>
+<div id="bla">
+<div class="wrap">
+<div class="box" markdown="1">
+So! Yeah!! I wanted to make a follow-up to [the <i>TADC</i> doodle](movie-day) from the start, but wasn't compelled enough by the show to make anything. Fast-forward a few weeks and these ideas spawned.
+
+Comics take a long time (this took about 9&nbsp;hours, both in one canvas) but I miss doing them. I still have all the assets and palettes from [the actual project site](https://a-flyleaf.github.io/hello-world) saved, even if the brushes don't behave exactly the same after however many FireAlpaca versions. Thought I might have trouble keeping the cast consistent after so long, but they've been doodled here and there over the years so (IMO) they don't look too off-model at all! Neat.
+
+Used a smidge of Blender for the house of cards (traced over it) and the knockoff-Caine army (array modifier my beloved). Here is knockoff-Caine-clone in all his pseudo-MSPaint glory. Feel free to commit atrocities with him.
+</div>
+
+<figure><img src="{%include url.html%}/assets/art/tad404_caine.png" alt="An extremely crude drawing of Caine. He looks artificially puffed."></figure>
+</div><!--/wrap--></div><!--/bla--></details></section>
