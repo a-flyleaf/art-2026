@@ -1,0 +1,64 @@
+---
+layout: "00"
+typ: index
+title: datacheck.html
+
+desc: |-
+  this page exists for my own reference, but I made it look ~nice since it's linked in the changelog. no&nbsp;explanations no&nbsp;gods no&nbsp;masters
+table: |-
+  - \*`cp` = caption, for `b3d` pages
+  - additional page-specific front matter not shown
+
+css: "
+	body{padding:0 1em;}
+	#table{max-width:100%; overflow-x:auto;}
+	table{border-collapse:collapse; margin:0 auto; font-family:consolas,monospace;}
+	th,td{border:1px solid; padding:.25em .5em; font-size:.85em;}
+	.null{color:#808080;}
+	.scroll{max-height:2.5em; overflow-y:auto;}
+	.text{font-family:sans-serif;}
+	.css{max-width:30em;}
+	
+	.b3d a,.fa a{color:inherit !important;}
+	.b3d{background:#181818; color:#dcdcdc;} .b3d a{text-decoration-color:#ff9f2c;}
+	.fa{background:#707070; color:#f0f0f0;}
+	
+	#tab{font-size:.75em; padding:1em 0 1.75em;} #table li{margin:.5em 0;}
+"
+---
+<section class="txt wrap">
+<h1>a-flyleaf/<a href="{%include url.html%}">art-2026</a>/<b>datacheck</b>.html</h1>
+
+{{page.desc|markdownify}}
+</section>
+
+<div id="table"><table><thead>
+	<th>layout</th>
+	<th>title (slug)</th>
+	<th>tags</th>
+	<th>date</th>
+	<th>typ</th>
+	<th>font</th>
+	<th>main & alt</th>
+	<th>img-class</th>
+	<th>css</th>
+	<th>cp<span>*</span></th>
+</thead><tbody>{%for a in site.art%}<tr{%if a.typ%} class="{{a.typ}}"{%endif%}>
+	<td>{{a.layout}}</td>
+	<td><b>{{a.title}}</b> (/<a href="{{a.url}}">{{a.slug}}</a>)</td>
+	<td>[{%for t in a.tags%}{{t}}{%unless forloop.last%},{%endunless%}{%endfor%}]</td>
+	<td>{{a.date|date:"%F"}}</td>
+	<td>{%if a.typ%}{{a.typ}}{%else%}<span class="null">-</span>{%endif%}</td>
+	<td>{%if a.font%}{{a.font|replace:"<","&lt;"|replace:">","&gt;"}}{%else%}-{%endif%}</td>
+	<td>
+		{%if a.main%}<a href="{%include url.html%}/assets/art/{{a.main}}">{{a.main}}</a>{%else%}<span class="null">-</span>{%endif%}
+		{{a.alt|markdownify|replace:"<p>","<div class='scroll text'>"|replace:"</p>","</div>"}}
+	</td>
+	<td>{%if a.img-class%}{{a.img-class}}{%else%}<span class="null">-</span>{%endif%}</td>
+	<td>{%if a.css%}<div class="scroll css">{{a.css}}</div>{%else%}<span class="null">-</span>{%endif%}</td>
+	<td>{%if a.cp%}<div class="scroll text">{{a.cp|markdownify}}</div>{%else%}<span class="null">-</span>{%endif%}</td>
+</tr>{%endfor%}</tbody></table></div>
+<div class="wrap" id="tab">{{page.table|markdownify}}</div>
+
+<footer class="wrap"><hr>
+<p>&lt;= <a href="{%include url.html%}">return to art-2026 index</a></p></footer>

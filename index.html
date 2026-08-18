@@ -40,7 +40,7 @@ changelog:
       +[hawkbane](INC_URL/hawkbane)
   - date: 2026-08-18
     desc: >-
-      +[shot](INC_URL/shot)
+      +[shot](INC_URL/shot); +<i>[datacheck](INC_URL/datacheck)</i>
 
 ---
 <section class="txt wrap">
@@ -64,9 +64,9 @@ tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{
 <section class="txt wrap"><p>Feel free to repost, edit, whatever—so long as credit is attached.</p></p>
 
 <footer class="wrap"><hr>
-	<p><small><i>updated <b>August&nbsp;18</b></i></small></p>
+	<p><small><i>updated <b>{%for c in page.changelog%}{%if forloop.last%}{{c.date|date:"%B %-d"}}{%endif%}{%endfor%}</b></i></small></p>
 
-	<details open><summary>changelog</summary>{%capture inc-url%}{%include url.html%}{%endcapture%}
+	<details><summary>changelog</summary>{%capture inc-url%}{%include url.html%}{%endcapture%}
 		<ul>{%for c in page.changelog%}<li><span class="li"><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"INC_URL",inc-url}}</span></li>{%endfor%}</ul>
 	</details>
 </footer>
