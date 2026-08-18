@@ -6,6 +6,7 @@ header,nav,main,section,footer{display:block;}
 img{max-width:100%;height:auto;}
 summary{cursor:pointer;}
 .sc{text-transform:uppercase;} b.sc{font-weight:normal;} .noi{font-style:normal;}
+.left{text-align:left;}/*currently only used for #fa figcaptions but could be extrapolated*/
 
 /*index, 404*/
 #index{font-family:verdana,sans-serif;}
@@ -92,11 +93,15 @@ summary{cursor:pointer;}
 #fa main small{font-size:.8em;}
 
 #fa figure{padding:0 1em; margin:0 auto; text-align:center; max-width:1200px;}
-#fa figcaption{text-align:left;}
 #fa .fg{border:2px dashed;} #fa .fg:hover,#fa .fg:focus,#fa .fg:active{background:#fff; opacity:.75;}
+#fa figure .wrap{max-width:37.5em;}
+#fa figcaption{color:#f0f0f0; font-size:.85em; margin:.5em 0; line-height:1.5;}
+#fa figcaption p+p{margin-top:.5em;}
+#fa figcaption ::selection{color:#000;}
 
 @media (prefers-color-scheme:dark){
 	#fa,#fa .box{background:#252525; color:#c0c0c0;}
 	#fa main{background:#474747; border-color:#282828;}
 	#fa ::selection,#fa a:hover,#fa a:focus,#fa a:active{background:#559cd1; color:#000;}
+	#fa figcaption{color:#c0c0c0;}
 }
