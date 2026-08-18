@@ -7,11 +7,11 @@ css: "
 		#gallery a:hover,#gallery a:focus,#gallery a:active{opacity:.5;}
 	
 	hr{margin:3em 0 .5em;}
-	footer{text-align:right;} #index footer p{margin:0; line-height:1;}
+	footer{text-align:right; padding-bottom:1em;} #index footer p{margin:0; line-height:1;}
 	small,details{font-size:.75em; opacity:.5;}
 	details{margin-top:1em; display:inline-block;} summary{padding:.5em 0;}
 	details[open]{opacity:1;} details[open] summary{border-bottom:1px dashed #808080;}
-	details ul{list-style-type:none;} details li{margin:.5em 0;} details li:after{content:'•'; color:#808080;}
+	details ul{text-align:left;} details li{margin:.5em 0; color:#808080;} .li{color:#000;} @media (prefers-color-scheme:dark){.li{color:#efefef;}}
 	
 	code{font-family:consolas,monospace; font-size:1.15em;}
 "
@@ -31,13 +31,16 @@ changelog:
       +[hipster ’yote](INC_URL/hipster-yote)
   - date: 2026-08-05
     desc: >-
-      normalized image links not force-opening in new tabs
+      normalized figure images not force-opening in new tabs
   - date: 2026-08-06
     desc: >-
       `#fa` layout; +[movie day](INC_URL/movie-day); +[ArtFight](INC_URL/artfight) +[danger: strangers](INC_URL/danger-strangers) +[TAD<span style="font-family:consolas,monospace;">404</span>](INC_URL/tad404)
   - date: 2026-08-17
     desc: >-
       +[hawkbane](INC_URL/hawkbane)
+  - date: 2026-08-18
+    desc: >-
+      +[shot](INC_URL/shot)
 
 ---
 <section class="txt wrap">
@@ -61,9 +64,9 @@ tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{
 <section class="txt wrap"><p>Feel free to repost, edit, whatever—so long as credit is attached.</p></p>
 
 <footer class="wrap"><hr>
-	<p><small><i>updated <b>August&nbsp;17</b></i></small></p>
+	<p><small><i>updated <b>August&nbsp;18</b></i></small></p>
 
-	<details><summary>changelog</summary>{%capture inc-url%}{%include url.html%}{%endcapture%}
-		<ul>{%for c in page.changelog%}<li><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"INC_URL",inc-url}}</li>{%endfor%}</ul>
+	<details open><summary>changelog</summary>{%capture inc-url%}{%include url.html%}{%endcapture%}
+		<ul>{%for c in page.changelog%}<li><span class="li"><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"INC_URL",inc-url}}</span></li>{%endfor%}</ul>
 	</details>
 </footer>
