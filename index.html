@@ -31,10 +31,13 @@ changelog:
       +[hipster ’yote](INC_URL/hipster-yote)
   - date: 2026-08-05
     desc: >-
-      all images open in new tabs
+      normalized image links not force-opening in new tabs
   - date: 2026-08-06
     desc: >-
       `#fa` layout; +[movie day](INC_URL/movie-day); +[ArtFight](INC_URL/artfight) +[danger: strangers](INC_URL/danger-strangers) +[TAD<span style="font-family:consolas,monospace;">404</span>](INC_URL/tad404)
+  - date: 2026-08-17
+    desc: >-
+      +[hawkbane](INC_URL/hawkbane)
 
 ---
 <section class="txt wrap">
@@ -58,7 +61,7 @@ tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{
 <section class="txt wrap"><p>Feel free to repost, edit, whatever—so long as credit is attached.</p></p>
 
 <footer class="wrap"><hr>
-	<p><small><i>updated <b>August&nbsp;06</b></i></small></p>
+	<p><small><i>updated <b>August&nbsp;17</b></i></small></p>
 
 	<details><summary>changelog</summary>{%capture inc-url%}{%include url.html%}{%endcapture%}
 		<ul>{%for c in page.changelog%}<li><b>{{c.date|date:"%B %-d"}}</b>: {{c.desc|markdownify|remove:"<p>"|remove:"</p>"|replace:"INC_URL",inc-url}}</li>{%endfor%}</ul>
