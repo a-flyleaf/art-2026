@@ -20,7 +20,7 @@
 			</div>{%endif%}
 		</section>{%endif%}
 
-		<section id="desc">{{content|markdownify}}</section>
+		{%unless page.slug=="cmyk"%}<section id="desc">{%endunless%}{{content|markdownify}}{%unless page.slug=="cmyk"%}</section>{%endunless%}
 	</main><hr><footer><div class="wrap">
 		<small><a href="{%include url.html%}">a-flyleaf{%if page.typ=="b3d"%} ◇ {%elsif page.typ=="fa"%}/{%endif%}<b>art-2026</b></a></small>
 	</div></footer>

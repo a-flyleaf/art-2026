@@ -1,7 +1,10 @@
 # site thigns
 - simple javascript click-zoom from /ygbtdm? on #fa mostly, but could be doable on #b3d with some addiitonal CSS fuckery
 - #b3d: prefers:light, using blender's ancient UI for palette. (can stay dark for brame tho it's part of the #vibe.)
-- #fa: style for customizing the header and/or main image backdrop? got fancy with the hawkbane+shot
+- #fa:
+	- style for customizing the header and/or main image backdrop? got fancy with the hawkbane+shot
+	- nobg looks too light on darkmode, just tweak the solid bg color
+- there's a one-off exception in the layout for cmyk to configure the #desc right. might be able to generalize that and apply retroactively to brame & artfight? *not* tad404 though, that one's weird
 
 
 # 8/19 disastersquares
@@ -12,8 +15,4 @@
 
 anyway this is not what I wanted to do in my little mid-August creative fever spree but EH. the timer can finally be reset on x years since I drew these characters
 
-## ++ [via discord]
-- kid!nico’s neck is too thin, vice versa adult
-- i gave ivy fucking. mari omorigame’s hair i KNEW that looked familiar !!!!
-- oh fine whatever if we’re editing the lineart then levi can get his braces back
-- older!ava’s ear is really fucking small. dodder has None (the outline around the face negates the hair-cover in the sketch)
+[8/20] also messed with the page code bc the Specific Layout of these doesn't really matter

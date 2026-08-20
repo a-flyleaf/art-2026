@@ -1,0 +1,57 @@
+---
+layout: "00"
+title: people who don’t smile and people who smile maybe too much
+slug: cmyk
+tags: [disastercrew]
+date: 2026-08-20
+#     90% of the drawing from last night (8/19),
+
+typ: fa
+# trying smg... no main bc I want the squares separate
+img-class: nobg
+alt: >-
+  Squares of character portraits. Detailed descriptions in the alt text, or [skip to the overall art description](#desc).
+cmyk:
+  - nm: nico
+    alt: >-
+      fwkjvnwk
+  - nm: ivy
+    alt: >-
+      fwkjvnwk
+  - nm: ava
+    alt: >-
+      fwkjvnwk
+  - nm: tara
+    alt: >-
+      fwkjvnwk
+  - nm: vexus
+    alt: >-
+      fwkjvnwk
+  - nm: levi
+    alt: >-
+      fwkjvnwk
+  - nm: dodder
+    alt: >-
+      fwkjvnwk
+
+css: "
+	#main ul{list-style-type:none;}
+"
+---
+<!--lifted from the `00` base layout-->
+<section id="main"{%if page.img-class%} class="{{page.img-class}}"{%endif%}><div class="x">{{page.alt|markdownify}}</div>
+	<ul>{%for c in page.cmyk%}<li id="{{c.nm}}"><a href="{%include url.html%}/assets/art/{{page.slug}}-{{c.nm}}.png" id="img"><img src="{%include url.html%}/assets/art/{{page.slug}}-{{c.nm}}.png" alt="{{c.alt|markdownify|remove:'<p>'|remove:'</p>'|strip_newlines}}"></a></li>{%endfor%}</ul>
+</section><!--/#main-->
+
+<section id="desc">
+<div class="wrap"><div class="box" markdown="1">
+- lost internet, started revisiting toyshelf, wanted to give these losers new "thumbnails" then these happened
+- 500x500 used to be my sketchdump size... looks Smol now (later upgraded to a 4:3 ratio, with slowly-increased canvas sizes over the last ~year-ish). this still took a hot minute bc like. Seven Separate Pieces with 10 people total
+- base colors + overlay spam isn't my favorite coloring style but when idk how I want to do the colors. it Works
+- y!Ivy & older!Ava's designs are not. super consistent. also forgo Levi's braces but they looked weird. oh well w/e
+
+anyway this is not what I wanted to do in my little mid-August creative fever spree but EH. the timer can finally be reset on x years since I drew these characters
+
+[8/20] also messed with the page code bc the Specific Layout of these doesn't really matter
+</div></div>
+</section>
