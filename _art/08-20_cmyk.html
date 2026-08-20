@@ -4,43 +4,45 @@ title: people who don’t smile and people who smile maybe too much
 slug: cmyk
 tags: [disastercrew]
 date: 2026-08-20
-#     90% of the drawing from last night (8/19),
+#     90% of the drawing from last night (8/19), fixes & HTML page today (8/20)
 
 typ: fa
-# trying smg... no main bc I want the squares separate
-img-class: nobg
+# tried doing this with the fa base layout but it was acting weird... might be able to retroactively normalize stuff but for now. w/e
 alt: >-
-  Squares of character portraits. Detailed descriptions in the alt text, or [skip to the overall art description](#desc).
+    Squares of character portraits. Detailed descriptions in the alt text, or [skip to the overall art description](#desc).
 cmyk:
   - nm: nico
     alt: >-
-      fwkjvnwk
+      Two versions of a sharp-faced guy. Young version is annoyed by his older self, who looks considerably less lively, scruffing his hair. Bright green, pale red.
   - nm: ivy
     alt: >-
-      fwkjvnwk
+      Two versions of a round-faced young woman. Younger version is timid; older self is not interacting with her at all. Pale blue, bright cyan.
   - nm: ava
     alt: >-
-      fwkjvnwk
+      Two versions of a cheery, bright girl. Both smile at each other with wide grins; the older holds a finger to her lip in a shushing motion, while the younger swipes her thumb across her neck. White, yellow.
   - nm: tara
     alt: >-
-      fwkjvnwk
+      A silhouette from the back; a tall figure holds up two fingers in a peace sign. Skewed angle, from dark trees to a vibrant, red-toned sky.
   - nm: vexus
     alt: >-
-      fwkjvnwk
+      A boy flips off the viewer. Grungy green.
   - nm: levi
     alt: >-
-      fwkjvnwk
+      A nerd with glasses and braces grins ominously over the viewer/camera. Textured purple.
   - nm: dodder
     alt: >-
-      fwkjvnwk
+      A disheveled, pale man stares direclty at the viewer/camera. Bright, pale yellow background; marred entirely by darker streaks and faint green scribbles.
 
 css: "
-	#main ul{list-style-type:none;}
+	#fa #main{padding:0;}
+	#main ul{list-style-type:none; line-height:0; background:#000; padding:.5em;}
+	#main li{display:inline-block; margin:.5em;}
+	.cmyk{display:inline-block;} .cmyk:hover,.cmyk:active,.cmyk:focus{opacity:.75;}
 "
 ---
-<!--lifted from the `00` base layout-->
+<!--lifted from the `00` base layout, with some adjustments-->
 <section id="main"{%if page.img-class%} class="{{page.img-class}}"{%endif%}><div class="x">{{page.alt|markdownify}}</div>
-	<ul>{%for c in page.cmyk%}<li id="{{c.nm}}"><a href="{%include url.html%}/assets/art/{{page.slug}}-{{c.nm}}.png" id="img"><img src="{%include url.html%}/assets/art/{{page.slug}}-{{c.nm}}.png" alt="{{c.alt|markdownify|remove:'<p>'|remove:'</p>'|strip_newlines}}"></a></li>{%endfor%}</ul>
+	<ul>{%for c in page.cmyk%}<li id="{{c.nm}}"><a href="{%include url.html%}/assets/art/{{page.slug}}-{{c.nm}}.png" class="cmyk"><img src="{%include url.html%}/assets/art/{{page.slug}}-{{c.nm}}.png" alt="{{c.alt|markdownify|remove:'<p>'|remove:'</p>'|strip_newlines}}"></a></li>{%endfor%}</ul>
 </section><!--/#main-->
 
 <section id="desc">
@@ -51,7 +53,5 @@ css: "
 - y!Ivy & older!Ava's designs are not. super consistent. also forgo Levi's braces but they looked weird. oh well w/e
 
 anyway this is not what I wanted to do in my little mid-August creative fever spree but EH. the timer can finally be reset on x years since I drew these characters
-
-[8/20] also messed with the page code bc the Specific Layout of these doesn't really matter
 </div></div>
 </section>
