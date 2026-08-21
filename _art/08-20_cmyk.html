@@ -43,7 +43,16 @@ css: "
 		#main li{width:30%; max-width:500px;}
 		#tara{width:100% !important; max-width:100% !important; margin:.5em 0 !important;}
 	}
-	#cmyk-list p:first-of-type{margin-bottom:0;} #fa .box ul{margin:0 1em;} #cmyk-list li{margin:.25em 0;}
+	#cmyk-list p:first-of-type{margin-bottom:0;} #fa .box ul{margin:0 1em;} #cmyk-list li{margin:.5em 0;}
+	
+	#thin{display:none;}
+	
+	@media only screen and (min-width:750px){
+		#float{text-align:center; max-width:1000px; margin:0 auto;}
+		#float figure,#float>.wrap{text-align:left; width:49%; vertical-align:middle; display:inline-block;}
+		#cmyk-list{margin-bottom:2em !important;}
+		#thin{display:inline;} #wide{display:none;}
+	}
 "
 ---
 <!--lifted from the `00` base layout, with some adjustments-->
@@ -56,15 +65,21 @@ css: "
 Lost internet, considered finally fixing the [Toyshelf](https://a-flyleaf.github.io/toyshelf) tagging system, went *nah* and whipped up some new "thumbnails" for these losers instead. Some of their designs are more consistent than others.
 </div></div>
 
-[WIP]
-I didn't really have an all-together layout planned. I still don't! For the finished squares above, I just winged it directly in code. Love being able to do that now 👌
+<div id="float"><figure>
+<a href="{%include url.html%}/assets/art/cmyk_wip.jpg" class="fg"><img src="{%include url.html%}/assets/art/cmyk_wip.jpg" alt="process shot of the squares in one canvas as drawn, in a 2×8 column (with one left intentionally blank, where time notes used to be)"></a>
+<div class="wrap left"><figcaption markdown="1">
+I didn't really have an all-together layout planned. I still don't! For the finished squares above, I just winged it directly in code 👍
+</figcaption></div>
+</figure>
 
 <div class="wrap"><div class="box" markdown="1" id="cmyk-list">
 random relevant factoids:
 - You know those digital artist memes about having unsearchable keysmash filenames? I did that at first. Then I got sick of it. In 2014, I started keeping random doodle-sketches in files titled by date. This does not solve any "where the fuck did I put that one scribble" problems, but it looks nice.  
 &emsp;Anyway, the default canvas size was 500×500px for years---including through 2018, when most of these characters were developed. Hence the size of these!
 - I try to avoid coloring with base colors + overlay spam. <small>(There's nothing Inherently Wrong with it, it just tends to feel cheap/lazy to me. Uniting a color scheme from the getgo tends to be faster, as a plus.)</small> These were all colored with base defaults and overlay spam anyway, because I did not have one singular iota of a palette plan going in.
-
-<b class="sc">time taken</b>: about 7&nbsp;hours, breaks not included, plus some untimed handful of minutes for next-day fixes. Also not including code fuckery on this webpage.
+</div>
+<div class="box" markdown="1">
+<b class="sc">time taken</b>: about 7&nbsp;hours, breaks not included, plus some untimed handful of minutes for next-day fixes. Also not including code fuckery on this webpage---primarily for the finished art, but also for this description. It's different if your browser's <span id="wide">wide</span><span class="x"> or </span><span id="thin">thin</span>!
 </div></div>
+</div><!--/#float-->
 </section>
