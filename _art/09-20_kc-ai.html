@@ -25,27 +25,31 @@ css: "
 	#img img{max-height:100vh;} #fa #img{border:0 !important;} #img:hover,#img:focus,#img active{opacity:.75;}
 	
 	#desc{padding-top:2em;}
-	h2{font-size:1.5em; font-weight:normal; line-height:1.25; margin-top:2em;} h2+p,h2+ul{margin-top:.5em !important;}
+	h3{font-size:1.5em; font-weight:normal; line-height:1.25; margin-top:2em;} h3+p,h3+ul{margin-top:.5em !important;}
 	
 	#toc{display:inline-block; border:1px solid; padding:1em;}
 	#toc big{font-size:1.15em;} #toc ol{margin:0 0 0 1em !important;}
 	li img{padding-top:.25em;} li ul{margin-top:-.25em !important;}
 	li small::after{content:' &lt;/figcaption&gt;'; padding-left:.25em;}
 	
-	h2:nth-of-type(n+2)::before{content:'advertisement'; text-transform:uppercase; border-top:2px solid; display:block; font-size:.35em; text-align:center; max-width:50%; margin:0 auto 3.5em; opacity:.25; letter-spacing:0.125em;}
+	h3:nth-of-type(n+2)::before{content:'advertisement'; text-transform:uppercase; border-top:2px solid; display:block; font-size:.35em; text-align:center; max-width:50%; margin:0 auto 3.5em; opacity:.25; letter-spacing:0.125em;}
 	
-	#bg{background:#000; background:url(./assets/art/kc-ai_wip4.jpg); background-size:cover; background-position:center; background-attachment:fixed; margin-top:6em;}
-	#fade{background:linear-gradient(to top,#000 0,rgba(0,0,0,.5) 5em); padding:5em 1em 1em; border-bottom:1px solid #404040;}
+	#bg{background:#000; background:url(./assets/art/kc-ai_wip4.jpg); background-size:cover; background-position:center; background-attachment:fixed; margin-top:6em; letter-spacing:0.0125em;}
+	#bg ::selection{background:#404040; color:#9f9f9f; background:rgba(255,255,255,.125);}
+	summary{background:#000; background:rgba(0,0,0,.75); color:#efefef; text-align:center; padding:2em 0;}
+	h2{display:inline; font-weight:normal; font-size:1.25em;}
+	#fade{background:linear-gradient(to top,#000 0,rgba(0,0,0,.5) 5em); padding:1em;}
+	#bg .dark,#bg .box{background:#202020; color:#dfdfdf; background:rgba(0,0,0,.75);}
+	#bg .box{border-radius:1rem;}
+	#bg .box p,#bg ul{line-height:1.75 !important;}
+	#bg li{margin:1em 0;}
 	.thin img{max-width:600px;}
 	#fa .fg{border:2px solid;}
 		#fa .fg:hover,#fa .fg:focus,#fa .fg:active{background:#000; opacity:1; border-style:dashed; color:#808080;}
 		#fa .fg:hover img,#fa .fg:focus img,#fa .fg:active img{opacity:.75;}
-	
-	#bg .dark,#bg .box{background:#202020; color:#dfdfdf; background:rgba(0,0,0,.75); letter-spacing:0.0125em;}
-	#bg .box{border-radius:1rem;} #bg p,#bg ul{line-height:1.625 !important;}
-	#bg .box ::selection,#bg .dark ::selection{background:#404040; color:#9f9f9f; background:rgba(255,255,255,.125);}
-	#bg li{margin:1em 0;}
 	#bg figcaption{margin-top:-.25em; padding:1em; color:#bfbfbf !important; background:rgba(0,0,0,.5);}
+	
+	footer{border-top:1px solid #404040;}
 "
 ---
 <div class="wrap"><div class="box" markdown="1">
@@ -54,10 +58,10 @@ Are you an artist who likes to be cheeky in third person? Not to worry. In this 
 <div id="toc" markdown="1">
 <big>Table of Contents</big>
 1. [More of this nonsense](#why)
-2. [The actual art description](#desc)
+2. [The actual art description](#bg)
 </div>
 
-<h2 id="why">1. Why different forms of non-representational art fascinate the author</h2>
+<h3 id="why">1. Why different forms of non-representational art fascinate the author</h3>
 It may surprise you to learn that the writer, who used fractal art in the first forum signature they can remember making, enjoys **non-representational art** and **meta-commentary**. They like to think they're clever. ✨👍
 
 Here are a few examples of how **art abstraction has been personally relevant**:
@@ -67,16 +71,16 @@ Here are a few examples of how **art abstraction has been personally relevant**:
 - People also said the same thing about photography. **It's [just pushing a button](https://en.wikipedia.org/wiki/Photography#Techniques), right?** 📸
 - And don't get them started about **Surrealism** and the **[Dada](https://en.wikipedia.org/wiki/Dada) movement**! 🎨
 
-## 2. How the author's fascination with different forms of abstract art shapes their opinions on AI quote-unquote "art"
+### 2. How the author's fascination with different forms of abstract art shapes their opinions on AI quote-unquote "art"
 - It's art.
 
-## 3. Why the author isn't convinced by moralistic arguments about art requiring effort or a "soul" to qualify as art
+### 3. Why the author isn't convinced by moralistic arguments about art requiring effort or a "soul" to qualify as art
 - Are you a Puritan? 🤨
 - People have always been lazy, intellectually dishonest, and keen to undervalue art as a profession. It's easier now. That's a **separate conversation**. 👉
 - <img src="{%include url.html%}/assets/tumblr_779f8c2e733967d576c3a086d31bb173_11e0793b_1280.jpg" alt="red photomanipulation with text in the style of magazine clippings, with words and letters snipped from screenshots. It reads as follows: “DO NOT repost don’t reference do not take inspiration I want fame without its impliCAtions Worship at my Temple (they cannot be made by anyone.) (permission Permission) (? Ask first) (Reblogs > likes!) (do not steal (duh)) look but don’t touch Please do not use my art as a pfp banner oR permaNent meMory See me TraNsient behINd glass (please do not) don’t trace my work (scrapers harming victims) (YOU repost my art. legal action.) (You [illegible] draw / write about / RP with [illegible] however please [illegible] these guidelines) wHaT I Make Does not MaTter unLess the world knows it’s minE! (considerate of my work)”. Some letters are snipped from the memefied text “You Wouldn’t Steal a Car,” from a PSA about piracy.">
 	- <small>(credit to whoever made this 😇)</small><!--<https://theothin.tumblr.com/post/826291611013136384/credit-to-whoever-made-this>-->
 
-## 4. Top three reasons to skim over this text?
+### 4. Top three reasons to skim over this text?
 - It should have been a **blog post**. 📝
 - It's **not about** this specific drawing. 😕
 - It's a **flagrant soapbox** because the writer is half-convinced they'll get **burned at the stake** for saying the computer pictures are cool sometimes, and they get **irrationally defensive** about it. 🔥
@@ -84,7 +88,8 @@ Here are a few examples of how **art abstraction has been personally relevant**:
 <br><br><br>...what's usually at the bottom of these bullshit "articles" anyway. I never scroll that far :V
 </div></div>
 
-<div id="bg"><div id="fade">
+<details id="bg" OPEN><summary><h2>the actual art description</h2></summary>
+<div id="fade">
 <div class="wrap"><div class="box dark" markdown="1">
 In no particular order, things that spawned this piece:
 - I've mentioned offhandedly that I think an AI trained on my art would be kinda neat. Discovered recently that [that's feasible now](https://thistrolldoesnotexist.tumblr.com/post/806592193889468416/im-a-digital-artist-first)! (The linked user has their model trained on photography, but personal illustrative-style-versions are a thing also.) It also seems to take hours, some pretty high-end processing power, and frankly just some techy know-how that, as of writing, I don't have the patience to sort out.
@@ -101,14 +106,14 @@ When the story these characters are from spawned in 2018--2020, AI art barely ex
 </div></div>
 
 <figure><a href="{%include url.html%}/assets/art/kc-ai_wip2.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip2.jpg" alt="various AI-generated lampposts on a winter street"></a>
-<figcaption class="dark"><div class="wrap">
+<figcaption class="dark"><div class="wrap" markdown="1">
 Please take a moment to appreciate, in high mostly-not-crunchy definition, the fucked up and evil: lamppost-trees! car-bikes! streetmush! and like a billion other bizarro-world details that I've gotten used to seeing already.
 </div></figcaption></figure>
 
 <figure><a href="{%include url.html%}/assets/art/kc-ai_wip3.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip3.jpg" alt="various snippets of the AI-generated images, applied to planes in a Blender 3D scene"></a></figure>
 
 <figure><a href="{%include url.html%}/assets/art/kc-ai_wip4.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip4.jpg" alt="the 3D background, on its own"></a>
-<figcaption class="dark"><div class="wrap">
+<figcaption class="dark"><div class="wrap" markdown="1">
 Array modifier my beloved. Most of these ~details got lost in the subsequent overlay-smushing, so here's the horrible car conga line in full high definition.
 </div></figcaption></figure>
 
@@ -122,4 +127,4 @@ Array modifier my beloved. Most of these ~details got lost in the subsequent ove
 <div class="wrap"><div class="box dark" markdown="1">
 A slightly ??annoying? ironic??? thing, about trying to mimic old AI tells in a lined drawing is that it just. ends up looking like a mistake. *Oh well.* Kicked the art inertia to the curb today, #hashtagThat'sWhatMatters
 </div></div>
-</div><!--/#fade--></div><!--/#bg-->
+</div><!--/#fade--></details><!--/#bg-->
