@@ -14,6 +14,7 @@ css: "
 	details ul{text-align:left;} details li{margin:.5em 0; color:#808080;} .li{color:#000;} @media (prefers-color-scheme:dark){.li{color:#efefef;}}
 	
 	code{font-family:consolas,monospace; font-size:1.15em;}
+	.gr{color:#808080;}
 "
 
 changelog:
@@ -47,6 +48,9 @@ changelog:
   - date: 2026-09-20
     desc: >-
       normalized tags; +[kc-ai](INC_URL/kc-ai)
+  - date: 2026-09-21
+    desc: >-
+      edited homepage credit note <i class="gr">("---so long as credit is attached" → "; credit appreciated if possible.")</i>
 
 ---
 <section class="txt wrap">
@@ -67,7 +71,7 @@ tags: <ul>[%for a in site.art%}{%assign tags=a.tags|uniq%}[%for t in tags%}<li>{
 </li></a>{%endfor%}</ul></section>
 <!--for dates I'm using whichever day the thing was "finished" on, w/e that means. details on the page itself.-->
 
-<section class="txt wrap"><p>Feel free to repost, edit, whatever—so long as credit is attached.</p></p>
+<section class="txt wrap"><p>Feel free to repost, edit, whatever; credit appreciated if possible.</p></section>
 
 <footer class="wrap"><hr>
 	<p><small><i>updated <b>{%for c in page.changelog%}{%if forloop.last%}{{c.date|date:"%B %-d"}}{%endif%}{%endfor%}</b></i></small></p>
