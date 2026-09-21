@@ -1,6 +1,6 @@
 ---
 layout: "00"
-title: "KC-AI.png; or, non-euclidean scarves"
+title: "kc-ai.png; or, non-euclidean scarves"
 slug: kc-ai
 tags: [404,edit]
 date: 2026-09-20
@@ -9,7 +9,22 @@ typ: fa
 main: kc-ai.png
 
 css: "
-	#main{image-rendering:pixelated;} /*nabbed from PCE. nice*/
+	body{background:#000;}
+	
+	/*copied from tad404*/
+	header,#first.box,footer{background:#000; color:#fff;}
+	#fa header ::selection,#fa footer ::selection,#s404 ::selection{background:#000; color:#808080;} #fa img::selection{background:0;}
+	#fa header,#fa footer{font-family:consolas,monospace; font-size:.85em; color:#b7b7b7;}
+	h1,footer b{font-weight:normal;}
+	header span{color:#000; cursor:default;} header span::after{content:'2026-09-20'; color:#808080;} header span::selection{color:#000 !important;}
+	#fa a:hover,#fa a:active,#fa a:focus{background:#484848; color:#fff;}
+	/*endcopy*/
+	#fa main{border-color:#404040; padding-bottom:0;}
+	
+	#fa #main{image-rendering:pixelated /*nabbed from PCE. nice*/; padding-bottom:3em; background:#000; border-top:0;}
+	#img img{max-height:100vh;} #fa #img{border:0 !important;} #img:hover,#img:focus,#img active{opacity:.75;}
+	
+	#desc{padding-top:2em;}
 	h2{font-size:1.5em; font-weight:normal; line-height:1.25; margin-top:2em;} h2+p,h2+ul{margin-top:.5em !important;}
 	
 	#toc{display:inline-block; border:1px solid; padding:1em;}
@@ -18,6 +33,19 @@ css: "
 	li small::after{content:' &lt;/figcaption&gt;'; padding-left:.25em;}
 	
 	h2:nth-of-type(n+2)::before{content:'advertisement'; text-transform:uppercase; border-top:2px solid; display:block; font-size:.35em; text-align:center; max-width:50%; margin:0 auto 3.5em; opacity:.25; letter-spacing:0.125em;}
+	
+	#bg{background:#000; background:url(./assets/art/kc-ai_wip4.jpg); background-size:cover; background-position:center; background-attachment:fixed; margin-top:6em;}
+	#fade{background:linear-gradient(to top,#000 0,rgba(0,0,0,.5) 5em); padding:5em 1em 1em; border-bottom:1px solid #404040;}
+	.thin img{max-width:600px;}
+	#fa .fg{border:2px solid;}
+		#fa .fg:hover,#fa .fg:focus,#fa .fg:active{background:#000; opacity:1; border-style:dashed; color:#808080;}
+		#fa .fg:hover img,#fa .fg:focus img,#fa .fg:active img{opacity:.75;}
+	
+	#bg .dark,#bg .box{background:#202020; color:#dfdfdf; background:rgba(0,0,0,.75); letter-spacing:0.0125em;}
+	#bg .box{border-radius:1rem;} #bg p,#bg ul{line-height:1.625 !important;}
+	#bg .box ::selection,#bg .dark ::selection{background:#404040; color:#9f9f9f; background:rgba(255,255,255,.125);}
+	#bg li{margin:1em 0;}
+	#bg figcaption{margin-top:-.25em; padding:1em; color:#bfbfbf !important; background:rgba(0,0,0,.5);}
 "
 ---
 <div class="wrap"><div class="box" markdown="1">
@@ -56,5 +84,42 @@ Here are a few examples of how **art abstraction has been personally relevant**:
 <br><br><br>...what's usually at the bottom of these bullshit "articles" anyway. I never scroll that far :V
 </div></div>
 
-<div class="wrap"><div class="box" markdown="1">
+<div id="bg"><div id="fade">
+<div class="wrap"><div class="box dark" markdown="1">
+In no particular order, things that spawned this piece:
+- I've mentioned offhandedly that I think an AI trained on my art would be kinda neat. Discovered recently that [that's feasible now](https://thistrolldoesnotexist.tumblr.com/post/806592193889468416/im-a-digital-artist-first)! (The linked user has their model trained on photography, but personal illustrative-style-versions are a thing also.) It also seems to take hours, some pretty high-end processing power, and frankly just some techy know-how that, as of writing, I don't have the patience to sort out.
+- I watched an AI-generated drama short, because apparently those are a thing now, and there's a bit where a character ties a scarf and it ends up in the entirely wrong shape. One smooth yet vague motion, completely inexplicable result. I enjoy it. I was tempted to animate it, but I did not feel like doing that, either.
+- Photobashing, meanwhile, is a fun thing I do not do often but enjoy when it happens. I keep wanting to use Blender for 3D scenery. *And* I've been in a creative rut so *what the hell, sure*:
 </div></div>
+
+<figure class="thin"><a href="{%include url.html%}/assets/art/kc-ai_wip1.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip1.jpg" alt="initial thumbnail sketch"></a></figure>
+
+<div class="wrap"><div class="box" markdown="1">
+When the story these characters are from spawned in 2018--2020, AI art barely existed, and when it did it was a mushy technicolor fever dream. There was a neat site where you could draw outlines or boxes and the AI would (attempt to) turn your scrawling into cats or buildings, respectively. It was actually my first thought for the background here, but apparently you gotta [download & train it yourself](https://ml4a.github.io/guides/Pix2Pix/) now.
+
+[Artbreeder](https://www.artbreeder.com/) time.
+</div></div>
+
+<figure><a href="{%include url.html%}/assets/art/kc-ai_wip2.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip2.jpg" alt="various AI-generated lampposts on a winter street"></a>
+<figcaption class="dark"><div class="wrap">
+Please take a moment to appreciate, in high mostly-not-crunchy definition, the fucked up and evil: lamppost-trees! car-bikes! streetmush! and like a billion other bizarro-world details that I've gotten used to seeing already.
+</div></figcaption></figure>
+
+<figure><a href="{%include url.html%}/assets/art/kc-ai_wip3.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip3.jpg" alt="various snippets of the AI-generated images, applied to planes in a Blender 3D scene"></a></figure>
+
+<figure><a href="{%include url.html%}/assets/art/kc-ai_wip4.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip4.jpg" alt="the 3D background, on its own"></a>
+<figcaption class="dark"><div class="wrap">
+Array modifier my beloved. Most of these ~details got lost in the subsequent overlay-smushing, so here's the horrible car conga line in full high definition.
+</div></figcaption></figure>
+
+<figure>
+	<a href="{%include url.html%}/assets/art/kc-ai_wip5+6.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip5+6.jpg" alt="sketch with values, background with values"></a>
+	<a href="{%include url.html%}/assets/art/kc-ai_wip7.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip7.jpg" alt="sketch on the background with values"></a>
+</figure>
+
+<figure><a href="{%include url.html%}/assets/art/kc-ai_wip8910.jpg" class="fg"><img src="{%include url.html%}/assets/art/kc-ai_wip8910.jpg" alt="sketch with values, background with values"></a></figure>
+
+<div class="wrap"><div class="box dark" markdown="1">
+A slightly ??annoying? ironic??? thing, about trying to mimic old AI tells in a lined drawing is that it just. ends up looking like a mistake. *Oh well.* Kicked the art inertia to the curb today, #hashtagThat'sWhatMatters
+</div></div>
+</div><!--/#fade--></div><!--/#bg-->
