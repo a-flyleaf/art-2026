@@ -5,7 +5,7 @@ header,nav,main,section,footer{display:block;}
 .wrap{margin:0 auto;}
 img{max-width:100%;height:auto;}
 summary{cursor:pointer;}
-.sc{text-transform:uppercase;} b.sc{font-weight:normal;} .noi{font-style:normal;}
+.sc{text-transform:uppercase;} b.sc{font-weight:normal;} .noi{font-style:normal;} .nob{font-weight:normal;}
 .left{text-align:left;}/*currently only used for #fa figcaptions but could be extrapolated*/
 
 /*index, 404*/
