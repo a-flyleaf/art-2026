@@ -4,3 +4,5 @@
 - #fa:
 	- style for customizing the header and/or main image backdrop? got fancy with the hawkbane+shot
 	- nobg looks too light on darkmode, just tweak the solid bg color
+
+- link brame moodboard!
