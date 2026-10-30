@@ -19,15 +19,23 @@ css: "/*copied from OG blockydob*/
 	#cp ul{list-style-type:none;} #cp li:before{content:'￮'; margin-right:.5em; margin-left:-1.5em;}
 		/*endmoff*/
 	
-	#b3d .dt li{line-height:1.625;}
-	#desc li{line-height:1.5; margin:.5em 0;}
-	#desc li ul{margin-left:1em;} #desc li ul li{margin:0;}
+	#b3d .dt{border-top:1px solid #181818;}
+	#b3d .dt li{line-height:1.75;}
+	#b3d .dt li ul li{margin:0 0 0 1em;}
+	
+	/*from japhet; might be good as a default?*/ code{padding:0 .25em;}
+	
+	#b3d figcaption p{line-height:1.25;} #b3d figcaption p+p{margin-top:-.5em;}
 "
 
 cp: |-
   - October 23--30, building on [previous](https://a-flyleaf.github.io/shriblets/2026-03-blockydob) [work](blockydob)
-  - <b class="sc">time taken</b>: [uhhhh]
+  - <b class="sc">time taken</b>: nearly 26 hours, shenanigans included
+# [10/23]126+128=254 | [10/26] 261+349=610 | [10/27] 114+26+102(+34 paintover)+20(+132 pepesilvia)=428 | [10/29] 90+172=262
+# 254+610+428+262=1554m = 25.9h = 25h54m....
 ---
+# i forgot to check the fucking shoes
+
 <div class="wrap" markdown="1">
 &gt;&nbsp;be me  
 &gt;&nbsp;design & model a random character on a whim  
@@ -39,94 +47,66 @@ cp: |-
 
 A neat little glow-up, if I do say so myself!
 
-<details OPEn><summary><big>patch notes & resources used</big></summary>
+<details><summary><big>patch notes & resources used</big></summary>
 <div class="dt" markdown="1">
-- Small boatload of "backend"/invisible changes:
-	- 
-
-- The pixel art details in the previous version were more a byproduct of the tutorial than an intentional part of the design. Having (nearly\*) everything modeled out nice and Smoothe™ is much, *much* closer to the original vision.
-	- \*Nearly, not *everything-*everything. The base outfit is set up with multiple layers of UV fuckery, which I did not feel like redoing from effectively-scratch.
-- I don't have to redraw the eyes every time I want to change the expression!! They were still a hassle given the unconventional shape, but it's easier to tweak vertices with shapekeys than redo every single pixel each time!!!
+- Small boatload of "**backend**"/invisible updates:
+	- [cleared leftover keyframes](https://www.reddit.com/r/blender/comments/1bklfzt/how_do_you_delete_all_keyframes/), because I do everything in One Gigantic Megafile. idk how people properly manage/separate assets yet
+	- various outfit & masking toggles
+	- lots of vertex cleanup & tweakage (unused groups & odd weights)
+	- unwieldy base texture at least now has a node frame
+	- made offshoot/solid textures for most objects & part of the base
+	- unfucked the mouth fusion, which is a thing that happened, somehow, somewhere along the line??
+	- also unfucked various bones, independent of weight paints
+- things I watched, ended up not using, but still think are useful:
+	- YouTube: [Hard Surface Modeling Tips](https://www.youtube.com/watch?v=jD0t6kcq7zM) + [6 Hard-Surface Modeling Tricks](https://www.youtube.com/watch?v=Ml2t8uxPAQU)
+	- YT: [How to Bake Normal Maps](https://www.youtube.com/watch?v=dPbrhqqrZck)
+	- YT: [Baking Normals](https://www.youtube.com/watch?v=j3lwBDtC0ic)
+	- YT: [Normal Maps](https://www.youtube.com/watch?v=WJZTI3SSVBU) (no baking in this one!)
+	- StackExchange: [rigging buttons](https://blender.stackexchange.com/questions/87357/how-to-rig-a-shirt-with-buttons-so-that-the-buttons-follow-the-mesh-of-the-shirt)
+	- YT: [Boolean Modifier](https://www.youtube.com/watch?v=CHqH5oz0DvQ)
+- on making the **rig** more usable:
+	- YouTube: [Fixing Rigify's broken fingers](https://www.youtube.com/watch?v=NlshSq4IX38)
+	- StackOverflow: [linking constraints](https://blender.stackexchange.com/questions/178227/customizing-the-rigify-meta-rig-constraints-custom-drivers-whats-the-soluti) (only worked for me with `basic.raw_copy` bones)
+	- StackExchange: [pinning custom properties](https://blender.stackexchange.com/questions/294897/can-i-change-blender-to-always-show-certain-panels-or-menus) (or any other panel!)
+- **Eyes** got redone again lol. I don't have to re-draw them every time I want to change the expression now!! Three layers: a boolean cutout object, interior sclera, and iris objects shrinkwrapped to the sclera. It still clips around the inner corner, but that can be either drawn over (see below) or fudged with shapekeys (as animated above).
+- **Modeled** a bunch of details that were previously flat or nonexistent: the diamond not-buttons, shoulder things, collar trim, black segments & back details on the top, and a proper belt. Still vastly simplified from [the original character design](https://www.artstation.com/artwork/XJW1n3), but I like this much better!
+	- The pixel art on the previous versions were more a byproduct of the tutorial I was following than an intentional design choice. Some pixelization lingers, but having the most prominent details modeled out nice and Smoothe™ is much, *much* closer to the original vision.
+	- also I don't like UVs and the wrangling thereof :V Feels like doing everything twice for, at least in this style, negligible benefit.
+- **Muzzle** is also more dynamic, with fully vector-based markings and an upper lip that can stretch and snarl; examples of that below.
+	- The marking-smoothness was inspired by Noggi's dissections of the <i>Guilty Gear</i> style; I don't remember in which of the [two](https://www.youtube.com/watch?v=tWcaQ3gCbUU) [videos](https://www.youtube.com/watch?v=234m7y8D3cE) it was covered, but the game gets extremely crisp color edges by simply drawing 3D edges in the same places. On a flat surface I think you'd normally accomplish that with a highres texture. But, again, I don't like UV-wrangling!! We can break the edge flow a little. As a treat.
+- **Shoes** did not get re-modeled but they're shiny now.
+- YT: [Three-Point Lighting Setup](https://www.youtube.com/watch?v=sN8hS2vLG4o), used for the turnaround above. HDRIs here & below are all Blender defaults.
+	- I linked a video on light linking [before](japhet) but missed a step this round. [Here is a 10-second video of the step (`CTRL+L`).](https://www.youtube.com/watch?v=BHMns2almVE)
 </div></details>
 
------
+Fortunately for this page's length, it's tricky for me to show off the changes chronologically. Most of it was making things more usable for myself, with no visible change! Also, I just hopped around from piece to piece instead of finishing an entire section in one go.
 
+Here is the one (1) process screenshot I took.
 
+<figure><a href="{%include url.html%}/assets/art/blockydob2_66-mouf.jpg" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_66-mouf.jpg" alt="Front view of the model(-in-progress), in which the sclera clip through the forehead, there is only one iris, and the mouths is unnaturally-wide open."></a>
+<figcaption><small><i>aaaaaaaaaaaaaaaa</i></small></figcaption></figure>
 
+Along the way, it occurred to me that I should probably show off the ~shiny new expressive capabilities~ somehow. The turnaround pictured above actually came last; these two things happened first.
 
-	### 10/23
-	- backend: nuked all holdover keyframes & shape keys from the various animations (yes it was all in one giant file bc idk how else to organize these things yet)
-	- backend: made various outfit toggles & stuck a node frame on the unwieldy base texture
-	- backend: cleaned up excess vertex groups
-	- video: [fixing the finger bones](https://www.youtube.com/watch?v=NlshSq4IX38) (used previously for catrene)
-	TIME TAKEN: 10:34-12:40 = **126m**
-	
-	(still 10/23 just Later)
-	- backend: tweaked various weight paints; still fluky but Less than before
-	- video: [failed attempt at button attachment](https://www.youtube.com/watch?v=jD0t6kcq7zM)
-	- videos (unused): <https://www.youtube.com/watch?v=dPbrhqqrZck>, <https://www.youtube.com/watch?v=j3lwBDtC0ic>, <https://www.youtube.com/watch?v=WJZTI3SSVBU>
-	- backend: fixed various bones on the metarig
-		- link: [relink constraints](https://blender.stackexchange.com/questions/178227/customizing-the-rigify-meta-rig-constraints-custom-drivers-whats-the-soluti) (only worked for the raw bone?)
-	TIME TAKEN: 18:14-20:22 = **128m**
-	
-	[not recorded: iPad pose doodles]
-	- link: <https://blender.stackexchange.com/questions/87357/how-to-rig-a-shirt-with-buttons-so-that-the-buttons-follow-the-mesh-of-the-shirt>
-	
-	### 10/26
-	- backend: split off shiny black & gold textures
-	- redid the eyes again lol. boolean cutout + sclera in the back + irises on a separate, shrinkwrapped plane
-	- added an eyebrow also
-	- experimented with a custom eye-shadow shader
-	- backend-ish: applied modifiers to buttons
-	- modeled shoulder things
-	TIME TAKEN: 14:09-18:30 = **261m**
-	
-	(later)
-	- unfucked the mouth fusion
-	- modeled black trim on the top
-	- backend: automated the torso/arm mask drivers
-	- antialiased (most of) the head: ears eyebrows nose snout; **took a screenshot**
-	- added snarly bones
-	- backend: rigged the eyebrows
-	- backend: fixed a bunch of face parenting
-	TIME TAKEN: ~18:45-00:34 = **349m**
-	
-	### 10/27 (today!)
-	- videos (unused): [ryan king boolean tutorial](https://www.youtube.com/watch?v=CHqH5oz0DvQ), <https://www.youtube.com/watch?v=Ml2t8uxPAQU>
-	- backend: fixed the sclera clipping, tweaked the iris subdivisions
-	- modeled turtleneck collar, antialiased the neck
-	- backend: removed duplicate custom properties
-	- backend: tweaked the buttons
-	- backend: readjusted weight paints on the jacket also
-	- backend: fixed the eye shadow slider
-	- modeled & rigged pawpads
-	- backend/link: [pinned the custom properties](https://blender.stackexchange.com/questions/294897/can-i-change-blender-to-always-show-certain-panels-or-menus)
-	- "modeled" shiny shoes
-	TIME TAKEN: 11:28-13:02, +20m to type all this up = 94+20m = **114m**
-	
-	### 10/27 cont'd.
-	- added back detailing, tweaked collar front
-	+13:40-14:06=**+26m**
+<figure>
+[pose sketches]
+<figcaption markdown="1">
+<small>All these poses are riffing on actual character scenes. When in doubt: Uhm, Ackshyewally,,,</small>
+</figcaption>
+[AWKWARD DOG]
+<figcaption markdown="1">
+<small>"oh blender would be really good for solving perspective and doing backgrounds" mfers when they realize they still have to Make The Background. hypothetically. or they can just render a transparent PNG and scribble around it in 2D 👍</small>
+</figcaption></figure>
 
-	### 10/27 cont'd. II
-	- backend: fixed various weight paints & bone configurations
-	- made a pose **awkwarddog** & did a quick painting for a background & to fix clipping
-	TIME TAKEN: 14:18-16:00 in blender = **+102m**, **+34m** paintover
+<figure>[PEPE SILVIA]
+<figcaption markdown="1">
+<small>i have been meaning to draw [this meme](https://screenrant.com/its-always-sunny-charlies-10-most-iconic-scenes/) with this fucking character since watching the show and then it finally happens with a 3D dog. what the hell, sure.</small>
 
-	### 10/27 cont'd. III
-	- 20:46-21:06 (**20m**): wiped file & minor tweakage
-		- link: [clearing all keyframes](https://www.reddit.com/r/blender/comments/1bklfzt/how_do_you_delete_all_keyframes/)
-		- adjusted teeth
-	- 21:06-23:18 (**132m**): pepe silvia
-		- photobashed the background from cap-that screenshots + my own artbook photo
-		- link: [OG pepe silvia meme](https://screenrant.com/its-always-sunny-charlies-10-most-iconic-scenes/)
-		- backend: vert & weight fixes
-	
-	### 10/29 (today, Entire Turnaround)
-	12:12-13:42=**90m**
-	- made a shitton of shapekeys to manually reduce clipping
-	21:12-00:04=**172m**
-	- link: [Ryan King 3-point lighting](https://www.youtube.com/watch?v=sN8hS2vLG4) (used this + very subtle default HDRI, the night one)
-	- link: [lighting links](https://www.youtube.com/shorts/BHMns2almVE)
-	- link: [the OG pose](https://arcanegifs.tumblr.com/post/790875197717790720/arcane-league-of-legends-1x04-happy-progress)
-	- link: [OG pose but static](https://s3.us-west-1.wasabisys.com/cap-that.com/tv/arcane/104/images/arcane1x04_1001.jpg)
+<small>Background photobashed from [screenshots via cap-that](https://www.cap-that.com/arcane/204/?page=15). There's also a piece from my own photo from the artbook, but it's near-entirely covered in the final render here.</small>
+</figcaption></figure>
+
+Anyway, while I was waiting for the turnaround to render I went and dug up some references to link here for the pose. Here it is as [two shiny gifs](https://arcanegifs.tumblr.com/post/790875197717790720/arcane-league-of-legends-1x04-happy-progress) and [a static image](https://s3.us-west-1.wasabisys.com/cap-that.com/tv/arcane/104/images/arcane1x04_1001.jpg).
+
+I realized. while staring at this, while my loyal old computer chugged along rendering. that *I pointed the wrong fucking hand* 3D is great guys here's a dog in cosplay whatever man I'm not fixing that
+
+[behind-the-scenes of the final render?]
