@@ -16,20 +16,26 @@ css: "/*copied from OG blockydob*/
 		/*copied from moff*/
 	#cp{text-align:center;}
 	h1{font-size:2em; font-style:italic; border-bottom:1px solid #4a4a4a; padding:.25em 0;}
-	#cp ul{list-style-type:none;} #cp li:before{content:'￮'; margin-right:.5em; margin-left:-1.5em;}
 		/*endmoff*/
+	#b3d #cp ul{list-style-type:none; margin-left:0;}
 	
-	#b3d .dt{border-top:1px solid #181818;}
+	#b3d details{background:#181818; padding:0;}
+	#b3d details summary{padding:.5em 1em;}
+	#b3d .dt{margin:0; background:#2e2e2e; padding:.5em 1.75em;}
 	#b3d .dt li{line-height:1.75;}
 	#b3d .dt li ul li{margin:0 0 0 1em;}
 	
 	/*from japhet; might be good as a default?*/ code{padding:0 .25em;}
 	
+	#b3d .big{padding:0 1em;}
 	#b3d figcaption p{line-height:1.25;} #b3d figcaption p+p{margin-top:-.5em;}
+	
+	#endnote{margin-top:2em;}
+	#endnote>ul{line-height:1.625; margin:-.875em 0 0 1em;} #endnote ul li+li{margin-top:.375em;} #endnote li ul{margin-left:1em;}
 "
 
 cp: |-
-  - October 23--30, building on [previous](https://a-flyleaf.github.io/shriblets/2026-03-blockydob) [work](blockydob)
+  - October 23--29, building on [previous](https://a-flyleaf.github.io/shriblets/2026-03-blockydob) [work](blockydob)
   - <b class="sc">time taken</b>: nearly 26 hours, shenanigans included
 # [10/23]126+128=254 | [10/26] 261+349=610 | [10/27] 114+26+102(+34 paintover)+20(+132 pepesilvia)=428 | [10/29] 90+172=262
 # 254+610+428+262=1554m = 25.9h = 25h54m....
@@ -41,9 +47,9 @@ cp: |-
 &gt;&nbsp;set it aside for a while because the design looks off  
 &gt;&nbsp;still want to futz with 3D in the interim  
 &gt;&nbsp;"hey the hands were easy this time. what if I give that dog more than 2 pointers and a thumb"  
-&gt;&nbsp;*proceed to spend hundreds of hours touching up basically everything everywhere*
+&gt;&nbsp;*proceed to spend Many More Hours touching up basically everything everywhere*
 
-A neat little glow-up, if I do say so myself!
+A much-needed glow-up, if I do say so myself!
 
 <details><summary><big>patch notes & resources used</big></summary>
 <div class="dt" markdown="1">
@@ -66,45 +72,57 @@ A neat little glow-up, if I do say so myself!
 	- YouTube: [Fixing Rigify's broken fingers](https://www.youtube.com/watch?v=NlshSq4IX38)
 	- StackOverflow: [linking constraints](https://blender.stackexchange.com/questions/178227/customizing-the-rigify-meta-rig-constraints-custom-drivers-whats-the-soluti) (only worked for me with `basic.raw_copy` bones)
 	- StackExchange: [pinning custom properties](https://blender.stackexchange.com/questions/294897/can-i-change-blender-to-always-show-certain-panels-or-menus) (or any other panel!)
-- **Eyes** got redone again lol. I don't have to re-draw them every time I want to change the expression now!! Three layers: a boolean cutout object, interior sclera, and iris objects shrinkwrapped to the sclera. It still clips around the inner corner, but that can be either drawn over (see below) or fudged with shapekeys (as animated above).
-- **Modeled** a bunch of details that were previously flat or nonexistent: the diamond not-buttons, shoulder things, collar trim, black segments & back details on the top, and a proper belt. Still vastly simplified from [the original character design](https://www.artstation.com/artwork/XJW1n3), but I like this much better!
+- **Eyes** got redone again lol. I don't have to re-draw them every time I want to change the expression now!! Three layers: a boolean cutout object, interior sclera, and iris objects shrinkwrapped to the sclera. It still clips around the inner corner, but that can be either drawn over or, as used above, fudged with shapekeys.
+- **Modeled** a bunch of details that were previously flat or nonexistent: the diamond not-buttons, shoulder things, collar trim, black segments & back details on the top, a proper belt, and of course the third not-thumb finger (and paw pads!). The outfit's still vastly simplified from [the original character design](https://www.artstation.com/artwork/XJW1n3), but I like this much better!
 	- The pixel art on the previous versions were more a byproduct of the tutorial I was following than an intentional design choice. Some pixelization lingers, but having the most prominent details modeled out nice and Smoothe™ is much, *much* closer to the original vision.
 	- also I don't like UVs and the wrangling thereof :V Feels like doing everything twice for, at least in this style, negligible benefit.
-- **Muzzle** is also more dynamic, with fully vector-based markings and an upper lip that can stretch and snarl; examples of that below.
+- **Muzzle** is also more dynamic, with fully vector-based markings and an upper lip that can stretch and snarl. Nice.
 	- The marking-smoothness was inspired by Noggi's dissections of the <i>Guilty Gear</i> style; I don't remember in which of the [two](https://www.youtube.com/watch?v=tWcaQ3gCbUU) [videos](https://www.youtube.com/watch?v=234m7y8D3cE) it was covered, but the game gets extremely crisp color edges by simply drawing 3D edges in the same places. On a flat surface I think you'd normally accomplish that with a highres texture. But, again, I don't like UV-wrangling!! We can break the edge flow a little. As a treat.
 - **Shoes** did not get re-modeled but they're shiny now.
-- YT: [Three-Point Lighting Setup](https://www.youtube.com/watch?v=sN8hS2vLG4o), used for the turnaround above. HDRIs here & below are all Blender defaults.
-	- I linked a video on light linking [before](japhet) but missed a step this round. [Here is a 10-second video of the step (`CTRL+L`).](https://www.youtube.com/watch?v=BHMns2almVE)
+- YT: [Three-Point Lighting Setup](https://www.youtube.com/watch?v=sN8hS2vLG4o), used for the turnaround above. All HDRIs are [Blender defaults](https://projects.blender.org/blender/blender/src/branch/main/release/datafiles/studiolights/world/license.txt).
+	- Also referenced [this 10-second short on light linking](https://www.youtube.com/watch?v=BHMns2almVE) because I missed the `CTRL+L` step this round.
 </div></details>
 
-Fortunately for this page's length, it's tricky for me to show off the changes chronologically. Most of it was making things more usable for myself, with no visible change! Also, I just hopped around from piece to piece instead of finishing an entire section in one go.
+Fortunately for this page's length, it's tricky for me to show off the process chronologically. Most of it was making things more usable for myself, with no visible change! Also, I just hopped around from piece to piece instead of finishing an entire section in one go.
 
-Here is the one (1) process screenshot I took.
+Here is the one (1) process screenshot that exists.
 
 <figure><a href="{%include url.html%}/assets/art/blockydob2_66-mouf.jpg" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_66-mouf.jpg" alt="Front view of the model(-in-progress), in which the sclera clip through the forehead, there is only one iris, and the mouths is unnaturally-wide open."></a>
-<figcaption><small><i>aaaaaaaaaaaaaaaa</i></small></figcaption></figure>
+<figcaption><small>aaaaaaaaaaaaaaaa</small></figcaption></figure>
 
-Along the way, it occurred to me that I should probably show off the ~shiny new expressive capabilities~ somehow. The turnaround pictured above actually came last; these two things happened first.
+Along the way, it occurred to me that I should probably show off the ~shiny new expressive capabilities~ somehow. The turnaround pictured above actually came last; the renders below happened first.
+</div>
 
-<figure>
-[pose sketches]
+<figure><div class="wrap"><a href="{%include url.html%}/assets/art/blockydob2_concepts.jpg" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_concepts.jpg" alt="Various crude concept sketches, attempting to figure out the face, hand, and pose."></a>
 <figcaption markdown="1">
 <small>All these poses are riffing on actual character scenes. When in doubt: Uhm, Ackshyewally,,,</small>
-</figcaption>
-<a href="{%include url.html%}/assets/art/blockydob2_69-awkwarddog.png" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_69-awkwarddog.png" alt="A render of the dog looking rather awkward; ears back, looking away, shoulders raised. Grimace-grinning. Hand pointed as if to say something."></a>
-<figcaption markdown="1">
-<small>"oh blender would be really good for solving perspective and doing backgrounds" mfers when they realize they still have to Make The Background. hypothetically. or they can just render a transparent PNG and throw color around it in 2D 👍</small>
+</figcaption></div>
+<div class="big"><a href="{%include url.html%}/assets/art/blockydob2_69-awkwarddog.png" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_69-awkwarddog.png" alt="A render of the dog looking rather awkward; ears back, looking away, shoulders raised. Grimace-grinning. Hand pointed as if to say something."></a></div>
+<figcaption markdown="1" class="wrap left">
+<small>"oh blender would be really good for solving perspective and doing backgrounds" mfers when they realize they still have to Make the background. hypothetically. or they can just render a transparent PNG and throw color around it in 2D 👍</small>
+
+<small>There was some mad clipping in some places that I also took the liberty of drawing over. If you can't tell where, job done!</small>
 </figcaption></figure>
 
-<figure><a href="{%include url.html%}/assets/art/blockydob2_71-pepe.png" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_71-pepe.png" alt="The dog ranting and raving about something, in front of a conspiracy board wall. Holding a paper of the meme the entire image is referencing."></a>
-<figcaption markdown="1">
+<figure><div class="big"><a href="{%include url.html%}/assets/art/blockydob2_71-pepe.png" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_71-pepe.png" alt="The dog ranting and raving about something, in front of a conspiracy board wall. Holding a paper of the meme the entire image is referencing."></a></div>
+<figcaption markdown="1" class="wrap left">
 <small>i have been meaning to draw [this meme](https://screenrant.com/its-always-sunny-charlies-10-most-iconic-scenes/) with this fucking character since watching the show and then it finally happens with a 3D dog. what the hell, sure.</small>
 
-<small>Background photobashed from [screenshots via cap-that](https://www.cap-that.com/arcane/204/?page=15). There's also a piece from my own photo from the artbook, but it's near-entirely covered in the final render here.</small>
+<small>Background photobashed from [screenshots via cap-that](https://www.cap-that.com/arcane/204/?page=15). There's also a piece from my own photo an artbook page, but it's near-entirely covered in the final render here.</small>
 </figcaption></figure>
 
-Anyway, while I was waiting for the turnaround to render I went and dug up some references to link here for the pose. Here it is as [two shiny gifs](https://arcanegifs.tumblr.com/post/790875197717790720/arcane-league-of-legends-1x04-happy-progress) and [a static image](https://s3.us-west-1.wasabisys.com/cap-that.com/tv/arcane/104/images/arcane1x04_1001.jpg).
+<div class="wrap" markdown="1" id="endnote">
+Anyway, some notes on the final turnaround:
+- There was a shitton of clipping by default and I went ham fixing it with shape keys. Absolutely not practical for anything in motion (the iris fixes were practically animated frame-by-frame), but workable enough for a static pose!
+- Made the signature angular by slapping a decimate modifier on it. The platform is mostly-circular, meanwhile, because pronounced angles were distracting & semi-rounded made a weird optical illusion where it seemed to be spinning backwards.
+	- Signature is deliberately offset from the platform, because it looked odd in perspective.
 
-I realized. while staring at this, while my loyal old computer chugged along rendering. that *I pointed the wrong fucking hand* 3D is great guys here's a dog in cosplay whatever man I'm not fixing that
+<figure><a href="{%include url.html%}/assets/art/blockydob2_74-angles2.jpg" class="fg"><img src="{%include url.html%}/assets/art/blockydob2_74-angles2.jpg" alt="The dog ranting and raving about something, in front of a conspiracy board wall. Holding a paper of the meme the entire image is referencing."></a>
+<figcaption markdown="1" class="wrap">
+<small>In lieu of process shots, here's a bunch of angles in one go. Uses [the "Night" HDRI](https://polyhaven.com/a/moonless_golf), which I am only now learning is apparently a golf course??</small>
+</figcaption></figure>
 
-[behind-the-scenes of the final render?]
+Also, while I was waiting for the turnaround to render, I dug up some references to link here for the pose. Here it is as [two shiny gifs](https://arcanegifs.tumblr.com/post/790875197717790720/arcane-league-of-legends-1x04-happy-progress) and [a static image](https://s3.us-west-1.wasabisys.com/cap-that.com/tv/arcane/104/images/arcane1x04_1001.jpg).
+
+I realized, while staring at this. whilst my loyal old computer chugged along rendering. that *I pointed the wrong fucking hand* oh well!!!!11!1! Calling it a day on this particular pose. Will I revisit the model a third time? No plans to. But we'll see...!
+</div>
