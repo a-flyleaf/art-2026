@@ -1,0 +1,132 @@
+---
+layout: "00"
+title: "spin that dog"
+slug: blockydob2
+tags: [3D,miscFanart]
+date: 2026-10-30
+
+typ: b3d
+main: blockydob2_74-ezgif.gif
+alt: >-
+  A turnaround gif of an anthropomorphic blue Dobrmann in a navy-and-gold uniform. The character is posed to point directly at the camera/viewer by default.
+img-class: sqh
+
+css: "/*copied from OG blockydob*/
+	#img{transition:.5s ease-in;} #img:active,#img:focus,#img:hover{transition:.65s ease-out;}
+		/*copied from moff*/
+	#cp{text-align:center;}
+	h1{font-size:2em; font-style:italic; border-bottom:1px solid #4a4a4a; padding:.25em 0;}
+	#cp ul{list-style-type:none;} #cp li:before{content:'￮'; margin-right:.5em; margin-left:-1.5em;}
+		/*endmoff*/
+	
+	#b3d .dt li{line-height:1.625;}
+	#desc li{line-height:1.5; margin:.5em 0;}
+	#desc li ul{margin-left:1em;} #desc li ul li{margin:0;}
+"
+
+cp: |-
+  - October 23--30, building on [previous](https://a-flyleaf.github.io/shriblets/2026-03-blockydob) [work](blockydob)
+  - <b class="sc">time taken</b>: [uhhhh]
+---
+<div class="wrap" markdown="1">
+&gt;&nbsp;be me  
+&gt;&nbsp;design & model a random character on a whim  
+&gt;&nbsp;block everything out wicked fast  
+&gt;&nbsp;set it aside for a while because the design looks off  
+&gt;&nbsp;still want to futz with 3D in the interim  
+&gt;&nbsp;"hey the hands were easy this time. what if I give that dog more than 2 pointers and a thumb"  
+&gt;&nbsp;*proceed to spend hundreds of hours touching up basically everything everywhere*
+
+A neat little glow-up, if I do say so myself!
+
+<details OPEn><summary><big>patch notes & resources used</big></summary>
+<div class="dt" markdown="1">
+- Small boatload of "backend"/invisible changes:
+	- 
+
+- The pixel art details in the previous version were more a byproduct of the tutorial than an intentional part of the design. Having (nearly\*) everything modeled out nice and Smoothe™ is much, *much* closer to the original vision.
+	- \*Nearly, not *everything-*everything. The base outfit is set up with multiple layers of UV fuckery, which I did not feel like redoing from effectively-scratch.
+- I don't have to redraw the eyes every time I want to change the expression!! They were still a hassle given the unconventional shape, but it's easier to tweak vertices with shapekeys than redo every single pixel each time!!!
+</div></details>
+
+-----
+
+
+
+
+	### 10/23
+	- backend: nuked all holdover keyframes & shape keys from the various animations (yes it was all in one giant file bc idk how else to organize these things yet)
+	- backend: made various outfit toggles & stuck a node frame on the unwieldy base texture
+	- backend: cleaned up excess vertex groups
+	- video: [fixing the finger bones](https://www.youtube.com/watch?v=NlshSq4IX38) (used previously for catrene)
+	TIME TAKEN: 10:34-12:40 = **126m**
+	
+	(still 10/23 just Later)
+	- backend: tweaked various weight paints; still fluky but Less than before
+	- video: [failed attempt at button attachment](https://www.youtube.com/watch?v=jD0t6kcq7zM)
+	- videos (unused): <https://www.youtube.com/watch?v=dPbrhqqrZck>, <https://www.youtube.com/watch?v=j3lwBDtC0ic>, <https://www.youtube.com/watch?v=WJZTI3SSVBU>
+	- backend: fixed various bones on the metarig
+		- link: [relink constraints](https://blender.stackexchange.com/questions/178227/customizing-the-rigify-meta-rig-constraints-custom-drivers-whats-the-soluti) (only worked for the raw bone?)
+	TIME TAKEN: 18:14-20:22 = **128m**
+	
+	[not recorded: iPad pose doodles]
+	- link: <https://blender.stackexchange.com/questions/87357/how-to-rig-a-shirt-with-buttons-so-that-the-buttons-follow-the-mesh-of-the-shirt>
+	
+	### 10/26
+	- backend: split off shiny black & gold textures
+	- redid the eyes again lol. boolean cutout + sclera in the back + irises on a separate, shrinkwrapped plane
+	- added an eyebrow also
+	- experimented with a custom eye-shadow shader
+	- backend-ish: applied modifiers to buttons
+	- modeled shoulder things
+	TIME TAKEN: 14:09-18:30 = **261m**
+	
+	(later)
+	- unfucked the mouth fusion
+	- modeled black trim on the top
+	- backend: automated the torso/arm mask drivers
+	- antialiased (most of) the head: ears eyebrows nose snout; **took a screenshot**
+	- added snarly bones
+	- backend: rigged the eyebrows
+	- backend: fixed a bunch of face parenting
+	TIME TAKEN: ~18:45-00:34 = **349m**
+	
+	### 10/27 (today!)
+	- videos (unused): [ryan king boolean tutorial](https://www.youtube.com/watch?v=CHqH5oz0DvQ), <https://www.youtube.com/watch?v=Ml2t8uxPAQU>
+	- backend: fixed the sclera clipping, tweaked the iris subdivisions
+	- modeled turtleneck collar, antialiased the neck
+	- backend: removed duplicate custom properties
+	- backend: tweaked the buttons
+	- backend: readjusted weight paints on the jacket also
+	- backend: fixed the eye shadow slider
+	- modeled & rigged pawpads
+	- backend/link: [pinned the custom properties](https://blender.stackexchange.com/questions/294897/can-i-change-blender-to-always-show-certain-panels-or-menus)
+	- "modeled" shiny shoes
+	TIME TAKEN: 11:28-13:02, +20m to type all this up = 94+20m = **114m**
+	
+	### 10/27 cont'd.
+	- added back detailing, tweaked collar front
+	+13:40-14:06=**+26m**
+
+	### 10/27 cont'd. II
+	- backend: fixed various weight paints & bone configurations
+	- made a pose **awkwarddog** & did a quick painting for a background & to fix clipping
+	TIME TAKEN: 14:18-16:00 in blender = **+102m**, **+34m** paintover
+
+	### 10/27 cont'd. III
+	- 20:46-21:06 (**20m**): wiped file & minor tweakage
+		- link: [clearing all keyframes](https://www.reddit.com/r/blender/comments/1bklfzt/how_do_you_delete_all_keyframes/)
+		- adjusted teeth
+	- 21:06-23:18 (**132m**): pepe silvia
+		- photobashed the background from cap-that screenshots + my own artbook photo
+		- link: [OG pepe silvia meme](https://screenrant.com/its-always-sunny-charlies-10-most-iconic-scenes/)
+		- backend: vert & weight fixes
+	
+	### 10/29 (today, Entire Turnaround)
+	12:12-13:42=**90m**
+	- made a shitton of shapekeys to manually reduce clipping
+	21:12-00:04=**172m**
+	- link: [Ryan King 3-point lighting](https://www.youtube.com/watch?v=sN8hS2vLG4) (used this + very subtle default HDRI, the night one)
+	- link: [lighting links](https://www.youtube.com/shorts/BHMns2almVE)
+	- link: [the OG pose](https://arcanegifs.tumblr.com/post/790875197717790720/arcane-league-of-legends-1x04-happy-progress)
+	- link: [OG pose but static](https://s3.us-west-1.wasabisys.com/cap-that.com/tv/arcane/104/images/arcane1x04_1001.jpg)
