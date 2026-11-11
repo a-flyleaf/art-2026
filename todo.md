@@ -5,5 +5,6 @@
 - #fa: style for customizing the header and/or main image backdrop?
 	- ^might require shfiting the HTML... writing in October it might be ~easier to make an alternate or offshoot layout, instead of changing them all retroactively
 
-# [10/8 1:28] busstop
-THE SHOE LINES. ON SERENA & NICO oh *that’s* why their feet were sticking out i need to gray the lines on the white parts gDI
+# artfixes (unlikely but Acknowledged)
+- busstop: THE SHOE LINES. ON SERENA & NICO oh *that’s* why their feet were sticking out i need to gray the lines on the white parts gDI
+- brib: backwards hand. ehhh
